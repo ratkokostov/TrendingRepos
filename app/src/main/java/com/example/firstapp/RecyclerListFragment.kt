@@ -33,7 +33,8 @@ class RecyclerListFragment : Fragment() {
     private fun initViewModel(view: View){
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(activity)
-        
+        val decoration = DividerItemDecoration(activity, DividerItemDecoration.VERTICAL)
+        recyclerView.addItemDecoration(decoration)
 
         recyclerAdapter = RecyclerViewAdapter()
         recyclerView.adapter = recyclerAdapter

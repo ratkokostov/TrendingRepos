@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.firstapp-mergeDebugResources-42:/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "com.example.firstapp-mergeDebugResources-24:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/ratko/.gradle/caches/transforms-3/c63657da0836c1cc23bbd3a36dc16a61/transformed/appcompat-1.4.2/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "source": "/home/ratko/.gradle/caches/transforms-3/8e898484a1c13ffd3f7c43ca6077999f/transformed/appcompat-1.4.2/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

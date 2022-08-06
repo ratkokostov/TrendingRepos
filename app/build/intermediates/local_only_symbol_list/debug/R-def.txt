@@ -7,7 +7,6 @@ color purple_700
 color teal_200
 color teal_700
 color white
-drawable defpic
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id container
@@ -21,8 +20,7 @@ layout recycler_list_row
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
-string hello_blank_fragment
-string profilepicture
+string profile_picture
 style Theme.FirstApp
 xml backup_rules
 xml data_extraction_rules

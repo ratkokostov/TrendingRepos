@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.firstapp-mergeDebugResources-42:/values-v16/values-v16.xml",
+            "outputFile": "com.example.firstapp-mergeDebugResources-24:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/ratko/.gradle/caches/transforms-3/2d10e326ee8d2c1713772ce33ded5b9f/transformed/core-1.7.0/res/values-v16/values-v16.xml",
+                    "source": "/home/ratko/.gradle/caches/transforms-3/ae9616d13e5213c0aa09c43a28ce0756/transformed/core-1.7.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/ratko/.gradle/caches/transforms-3/c63657da0836c1cc23bbd3a36dc16a61/transformed/appcompat-1.4.2/res/values-v16/values-v16.xml",
+                    "source": "/home/ratko/.gradle/caches/transforms-3/8e898484a1c13ffd3f7c43ca6077999f/transformed/appcompat-1.4.2/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
