@@ -1,0 +1,255 @@
+Index: app/src/main/java/com/example/firstapp/ui/theme/Theme.kt
+===================================================================
+diff --git a/app/src/main/java/com/example/firstapp/ui/theme/Theme.kt b/app/src/main/java/com/example/firstapp/ui/theme/Theme.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/example/firstapp/ui/theme/Theme.kt	
++++ /dev/null	
+@@ -1,44 +0,0 @@
+-package com.example.firstapp.ui.theme
+-
+-import androidx.compose.foundation.isSystemInDarkTheme
+-import androidx.compose.material.MaterialTheme
+-import androidx.compose.material.darkColors
+-import androidx.compose.material.lightColors
+-import androidx.compose.runtime.Composable
+-
+-private val DarkColorPalette = darkColors(
+-    primary = Purple200,
+-    primaryVariant = Purple700,
+-    secondary = Teal200
+-)
+-
+-private val LightColorPalette = lightColors(
+-    primary = Purple500,
+-    primaryVariant = Purple700,
+-    secondary = Teal200
+-
+-    /* Other default colors to override
+-    background = Color.White,
+-    surface = Color.White,
+-    onPrimary = Color.White,
+-    onSecondary = Color.Black,
+-    onBackground = Color.Black,
+-    onSurface = Color.Black,
+-    */
+-)
+-
+-@Composable
+-fun FirstAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
+-    val colors = if (darkTheme) {
+-        DarkColorPalette
+-    } else {
+-        LightColorPalette
+-    }
+-
+-    MaterialTheme(
+-        colors = colors,
+-        typography = Typography,
+-        shapes = Shapes,
+-        content = content
+-    )
+-}
+\ No newline at end of file
+Index: app/src/main/java/com/example/firstapp/View/HomeUi.kt
+===================================================================
+diff --git a/app/src/main/java/com/example/firstapp/View/HomeUi.kt b/app/src/main/java/com/example/firstapp/View/HomeUi.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/example/firstapp/View/HomeUi.kt	
++++ /dev/null	
+@@ -1,75 +0,0 @@
+-package com.example.firstapp.View
+-
+-import androidx.compose.foundation.background
+-import androidx.compose.foundation.layout.*
+-import androidx.compose.foundation.shape.CircleShape
+-import androidx.compose.foundation.shape.RoundedCornerShape
+-import androidx.compose.material.Card
+-import androidx.compose.material.MaterialTheme
+-import androidx.compose.runtime.Composable
+-import androidx.compose.ui.Modifier
+-import androidx.compose.ui.unit.dp
+-import androidx.compose.material.Surface
+-import androidx.compose.material.Text
+-import androidx.compose.ui.draw.clip
+-import androidx.compose.ui.graphics.Color
+-import androidx.compose.ui.layout.ContentScale
+-import androidx.compose.ui.platform.LocalContext
+-import androidx.compose.ui.text.font.FontWeight
+-import androidx.compose.ui.text.style.TextOverflow
+-import coil.compose.AsyncImage
+-import coil.request.ImageRequest
+-import com.example.firstapp.model.Item
+-import com.example.firstapp.model.Post
+-
+-@Composable
+-fun RepoItem(post: Item){
+-    Card(modifier = Modifier
+-        .padding(8.dp, 4.dp)
+-        .fillMaxWidth()
+-        .height(110.dp),
+-        shape = RoundedCornerShape(8.dp),
+-        elevation =  4.dp
+-    ){
+-        Surface(){
+-            Row(
+-                Modifier
+-                    .padding(4.dp)
+-                    .fillMaxSize()){
+-               AsyncImage(model = ImageRequest.Builder(LocalContext.current).data(post.owner.avatarUrl)
+-                        .crossfade(true)
+-                        .build(),
+-                   contentDescription = post.description,
+-                   contentScale =  ContentScale.Crop,
+-                   modifier = Modifier
+-                       .clip(CircleShape)
+-                       .fillMaxHeight()
+-                       .weight(0.2f)
+-                   )
+-                Column(
+-                    verticalArrangement =  Arrangement.Center,
+-                    modifier = Modifier
+-                        .padding(4.dp)
+-                        .fillMaxHeight()
+-                        .weight(0.8f)
+-                ){
+-                    Text(text = post.fullName,
+-                        style = MaterialTheme.typography.caption,
+-                        fontWeight = FontWeight.Bold
+-                    )
+-                    Text(text = post.name, style = MaterialTheme.typography.caption,
+-                        modifier = Modifier
+-                            .background(
+-                                Color.LightGray
+-                            )
+-                            .padding(4.dp))
+-
+-                    Text(text = post.description, style = MaterialTheme.typography.body1,maxLines = 2, overflow = TextOverflow.Ellipsis)
+-                }
+-            }
+-
+-
+-        }
+-
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/java/com/example/firstapp/ui/theme/Color.kt
+===================================================================
+diff --git a/app/src/main/java/com/example/firstapp/ui/theme/Color.kt b/app/src/main/java/com/example/firstapp/ui/theme/Color.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/example/firstapp/ui/theme/Color.kt	
++++ /dev/null	
+@@ -1,8 +0,0 @@
+-package com.example.firstapp.ui.theme
+-
+-import androidx.compose.ui.graphics.Color
+-
+-val Purple200 = Color(0xFFBB86FC)
+-val Purple500 = Color(0xFF6200EE)
+-val Purple700 = Color(0xFF3700B3)
+-val Teal200 = Color(0xFF03DAC5)
+\ No newline at end of file
+Index: app/src/main/java/com/example/firstapp/ui/theme/Shape.kt
+===================================================================
+diff --git a/app/src/main/java/com/example/firstapp/ui/theme/Shape.kt b/app/src/main/java/com/example/firstapp/ui/theme/Shape.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/example/firstapp/ui/theme/Shape.kt	
++++ /dev/null	
+@@ -1,11 +0,0 @@
+-package com.example.firstapp.ui.theme
+-
+-import androidx.compose.foundation.shape.RoundedCornerShape
+-import androidx.compose.material.Shapes
+-import androidx.compose.ui.unit.dp
+-
+-val Shapes = Shapes(
+-    small = RoundedCornerShape(4.dp),
+-    medium = RoundedCornerShape(4.dp),
+-    large = RoundedCornerShape(0.dp)
+-)
+\ No newline at end of file
+Index: app/src/main/java/com/example/firstapp/ui/theme/Type.kt
+===================================================================
+diff --git a/app/src/main/java/com/example/firstapp/ui/theme/Type.kt b/app/src/main/java/com/example/firstapp/ui/theme/Type.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/example/firstapp/ui/theme/Type.kt	
++++ /dev/null	
+@@ -1,28 +0,0 @@
+-package com.example.firstapp.ui.theme
+-
+-import androidx.compose.material.Typography
+-import androidx.compose.ui.text.TextStyle
+-import androidx.compose.ui.text.font.FontFamily
+-import androidx.compose.ui.text.font.FontWeight
+-import androidx.compose.ui.unit.sp
+-
+-// Set of Material typography styles to start with
+-val Typography = Typography(
+-    body1 = TextStyle(
+-        fontFamily = FontFamily.Default,
+-        fontWeight = FontWeight.Normal,
+-        fontSize = 16.sp
+-    )
+-    /* Other default text styles to override
+-    button = TextStyle(
+-        fontFamily = FontFamily.Default,
+-        fontWeight = FontWeight.W500,
+-        fontSize = 14.sp
+-    ),
+-    caption = TextStyle(
+-        fontFamily = FontFamily.Default,
+-        fontWeight = FontWeight.Normal,
+-        fontSize = 12.sp
+-    )
+-    */
+-)
+\ No newline at end of file
+Index: app/src/main/java/com/example/firstapp/model/Post.kt
+===================================================================
+diff --git a/app/src/main/java/com/example/firstapp/model/Post.kt b/app/src/main/java/com/example/firstapp/model/Post.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/example/firstapp/model/Post.kt	
++++ /dev/null	
+@@ -1,11 +0,0 @@
+-package com.example.firstapp.model
+-
+-import android.content.ClipData
+-
+-data class Post(
+-    val total_count: Int,
+-    val incomplete_results: Boolean,
+-    val items: MutableList<Item>
+-)
+-
+-
+Index: .idea/inspectionProfiles/Project_Default.xml
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/inspectionProfiles/Project_Default.xml	
+@@ -0,0 +1,23 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="PreviewAnnotationInFunctionWithParameters" enabled="true" level="ERROR" enabled_by_default="true">
++      <option name="previewFile" value="true" />
++    </inspection_tool>
++    <inspection_tool class="PreviewDimensionRespectsLimit" enabled="true" level="WARNING" enabled_by_default="true">
++      <option name="previewFile" value="true" />
++    </inspection_tool>
++    <inspection_tool class="PreviewMultipleParameterProviders" enabled="true" level="ERROR" enabled_by_default="true">
++      <option name="previewFile" value="true" />
++    </inspection_tool>
++    <inspection_tool class="PreviewMustBeTopLevelFunction" enabled="true" level="ERROR" enabled_by_default="true">
++      <option name="previewFile" value="true" />
++    </inspection_tool>
++    <inspection_tool class="PreviewNeedsComposableAnnotation" enabled="true" level="ERROR" enabled_by_default="true">
++      <option name="previewFile" value="true" />
++    </inspection_tool>
++    <inspection_tool class="PreviewPickerAnnotation" enabled="true" level="ERROR" enabled_by_default="true">
++      <option name="previewFile" value="true" />
++    </inspection_tool>
++  </profile>
++</component>
+\ No newline at end of file

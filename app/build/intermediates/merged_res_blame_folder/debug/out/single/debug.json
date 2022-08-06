@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/layout_homescreen.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/layout/homescreen.xml"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/xml_data_extraction_rules.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/layout_fragment_recycler_list.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/layout/fragment_recycler_list.xml"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.firstapp-merged_res-44:/layout_recycler_list_row.xml.flat",
+        "source": "com.example.firstapp-main-46:/layout/recycler_list_row.xml"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/layout_activity_main.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/drawable_defpic.png.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/drawable/defpic.png"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/layout_recycler_list_row.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/layout/recycler_list_row.xml"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/xml_backup_rules.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-44:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-46:/mipmap-xxhdpi/ic_launcher.webp"
+    }
+]

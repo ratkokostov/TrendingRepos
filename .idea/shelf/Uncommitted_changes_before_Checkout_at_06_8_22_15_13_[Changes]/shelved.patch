@@ -1,0 +1,407 @@
+Index: app/src/main/java/com/example/firstapp/model/Item.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.firstapp.model\nimport com.google.gson.annotations.SerializedName\n\ndata class GithubTrending(\n    @SerializedName(\"incomplete_results\")\n    val incompleteResults: Boolean,\n    @SerializedName(\"items\")\n    val items: List<Item>,\n    @SerializedName(\"total_count\")\n    val totalCount: Int\n)\n\ndata class Item(\n    @SerializedName(\"allow_forking\")\n    val allowForking: Boolean,\n    @SerializedName(\"archive_url\")\n    val archiveUrl: String,\n    @SerializedName(\"archived\")\n    val archived: Boolean,\n    @SerializedName(\"assignees_url\")\n    val assigneesUrl: String,\n    @SerializedName(\"blobs_url\")\n    val blobsUrl: String,\n    @SerializedName(\"branches_url\")\n    val branchesUrl: String,\n    @SerializedName(\"clone_url\")\n    val cloneUrl: String,\n    @SerializedName(\"collaborators_url\")\n    val collaboratorsUrl: String,\n    @SerializedName(\"comments_url\")\n    val commentsUrl: String,\n    @SerializedName(\"commits_url\")\n    val commitsUrl: String,\n    @SerializedName(\"compare_url\")\n    val compareUrl: String,\n    @SerializedName(\"contents_url\")\n    val contentsUrl: String,\n    @SerializedName(\"contributors_url\")\n    val contributorsUrl: String,\n    @SerializedName(\"created_at\")\n    val createdAt: String,\n    @SerializedName(\"default_branch\")\n    val defaultBranch: String,\n    @SerializedName(\"deployments_url\")\n    val deploymentsUrl: String,\n    @SerializedName(\"description\")\n    val description: String,\n    @SerializedName(\"disabled\")\n    val disabled: Boolean,\n    @SerializedName(\"downloads_url\")\n    val downloadsUrl: String,\n    @SerializedName(\"events_url\")\n    val eventsUrl: String,\n    @SerializedName(\"fork\")\n    val fork: Boolean,\n    @SerializedName(\"forks\")\n    val forks: Int,\n    @SerializedName(\"forks_count\")\n    val forksCount: Int,\n    @SerializedName(\"forks_url\")\n    val forksUrl: String,\n    @SerializedName(\"full_name\")\n    val fullName: String,\n    @SerializedName(\"git_commits_url\")\n    val gitCommitsUrl: String,\n    @SerializedName(\"git_refs_url\")\n    val gitRefsUrl: String,\n    @SerializedName(\"git_tags_url\")\n    val gitTagsUrl: String,\n    @SerializedName(\"git_url\")\n    val gitUrl: String,\n    @SerializedName(\"has_downloads\")\n    val hasDownloads: Boolean,\n    @SerializedName(\"has_issues\")\n    val hasIssues: Boolean,\n    @SerializedName(\"has_pages\")\n    val hasPages: Boolean,\n    @SerializedName(\"has_projects\")\n    val hasProjects: Boolean,\n    @SerializedName(\"has_wiki\")\n    val hasWiki: Boolean,\n    @SerializedName(\"homepage\")\n    val homepage: String,\n    @SerializedName(\"hooks_url\")\n    val hooksUrl: String,\n    @SerializedName(\"html_url\")\n    val htmlUrl: String,\n    @SerializedName(\"id\")\n    val id: Int,\n    @SerializedName(\"is_template\")\n    val isTemplate: Boolean,\n    @SerializedName(\"issue_comment_url\")\n    val issueCommentUrl: String,\n    @SerializedName(\"issue_events_url\")\n    val issueEventsUrl: String,\n    @SerializedName(\"issues_url\")\n    val issuesUrl: String,\n    @SerializedName(\"keys_url\")\n    val keysUrl: String,\n    @SerializedName(\"labels_url\")\n    val labelsUrl: String,\n    @SerializedName(\"language\")\n    val language: String,\n    @SerializedName(\"languages_url\")\n    val languagesUrl: String,\n    @SerializedName(\"license\")\n    val license: License,\n    @SerializedName(\"merges_url\")\n    val mergesUrl: String,\n    @SerializedName(\"milestones_url\")\n    val milestonesUrl: String,\n    @SerializedName(\"mirror_url\")\n    val mirrorUrl: Any,\n    @SerializedName(\"name\")\n    val name: String,\n    @SerializedName(\"node_id\")\n    val nodeId: String,\n    @SerializedName(\"notifications_url\")\n    val notificationsUrl: String,\n    @SerializedName(\"open_issues\")\n    val openIssues: Int,\n    @SerializedName(\"open_issues_count\")\n    val openIssuesCount: Int,\n    @SerializedName(\"owner\")\n    val owner: Owner,\n    @SerializedName(\"private\")\n    val `private`: Boolean,\n    @SerializedName(\"pulls_url\")\n    val pullsUrl: String,\n    @SerializedName(\"pushed_at\")\n    val pushedAt: String,\n    @SerializedName(\"releases_url\")\n    val releasesUrl: String,\n    @SerializedName(\"score\")\n    val score: Double,\n    @SerializedName(\"size\")\n    val size: Int,\n    @SerializedName(\"ssh_url\")\n    val sshUrl: String,\n    @SerializedName(\"stargazers_count\")\n    val stargazersCount: Int,\n    @SerializedName(\"stargazers_url\")\n    val stargazersUrl: String,\n    @SerializedName(\"statuses_url\")\n    val statusesUrl: String,\n    @SerializedName(\"subscribers_url\")\n    val subscribersUrl: String,\n    @SerializedName(\"subscription_url\")\n    val subscriptionUrl: String,\n    @SerializedName(\"svn_url\")\n    val svnUrl: String,\n    @SerializedName(\"tags_url\")\n    val tagsUrl: String,\n    @SerializedName(\"teams_url\")\n    val teamsUrl: String,\n    @SerializedName(\"topics\")\n    val topics: List<String>,\n    @SerializedName(\"trees_url\")\n    val treesUrl: String,\n    @SerializedName(\"updated_at\")\n    val updatedAt: String,\n    @SerializedName(\"url\")\n    val url: String,\n    @SerializedName(\"visibility\")\n    val visibility: String,\n    @SerializedName(\"watchers\")\n    val watchers: Int,\n    @SerializedName(\"watchers_count\")\n    val watchersCount: Int,\n    @SerializedName(\"web_commit_signoff_required\")\n    val webCommitSignoffRequired: Boolean\n)\n\ndata class License(\n    @SerializedName(\"key\")\n    val key: String,\n    @SerializedName(\"name\")\n    val name: String,\n    @SerializedName(\"node_id\")\n    val nodeId: String,\n    @SerializedName(\"spdx_id\")\n    val spdxId: String,\n    @SerializedName(\"url\")\n    val url: String\n)\n\n
+===================================================================
+diff --git a/app/src/main/java/com/example/firstapp/model/Item.kt b/app/src/main/java/com/example/firstapp/model/Item.kt
+--- a/app/src/main/java/com/example/firstapp/model/Item.kt	
++++ b/app/src/main/java/com/example/firstapp/model/Item.kt	
+@@ -4,10 +4,11 @@
+ data class GithubTrending(
+     @SerializedName("incomplete_results")
+     val incompleteResults: Boolean,
+-    @SerializedName("items")
+-    val items: List<Item>,
+     @SerializedName("total_count")
+-    val totalCount: Int
++    val totalCount: Int,
++    @SerializedName("items")
++    val items: MutableList<Item>
++
+ )
+ 
+ data class Item(
+Index: app/src/main/java/com/example/firstapp/viewModel/PostViewModel.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.firstapp.viewModel\n\nimport android.util.Log\nimport androidx.compose.runtime.getValue\nimport androidx.compose.runtime.mutableStateOf\nimport androidx.compose.runtime.setValue\nimport androidx.lifecycle.ViewModel\nimport androidx.lifecycle.viewModelScope\nimport com.example.firstapp.model.Item\nimport com.example.firstapp.network.ApiService\nimport kotlinx.coroutines.flow.MutableStateFlow\nimport kotlinx.coroutines.flow.StateFlow\nimport kotlinx.coroutines.launch\n\nclass PostViewModel : ViewModel() {\n\n    val postListResponse: MutableStateFlow<List<Item>> = MutableStateFlow(listOf<Item>())\n    var errorMessage: String by mutableStateOf(\"ErrorMessage\")\n\n    fun getPostsList() {\n        viewModelScope.launch {\n            val apiService = ApiService.getInstance()\n            try {\n                val repoList = apiService.getPosts()\n                postListResponse.emit(repoList.items)\n                Log.d(\"Lista\", repoList.toString())\n            } catch (e: Exception) {\n                errorMessage = e.message.toString()\n                Log.e(\"PostViewModel\", \" \", e)\n            }\n        }\n    }\n}
+===================================================================
+diff --git a/app/src/main/java/com/example/firstapp/viewModel/PostViewModel.kt b/app/src/main/java/com/example/firstapp/viewModel/PostViewModel.kt
+--- a/app/src/main/java/com/example/firstapp/viewModel/PostViewModel.kt	
++++ b/app/src/main/java/com/example/firstapp/viewModel/PostViewModel.kt	
+@@ -1,33 +1,27 @@
+ package com.example.firstapp.viewModel
+ 
+-import android.util.Log
+-import androidx.compose.runtime.getValue
+-import androidx.compose.runtime.mutableStateOf
+-import androidx.compose.runtime.setValue
++import androidx.lifecycle.MutableLiveData
+ import androidx.lifecycle.ViewModel
+ import androidx.lifecycle.viewModelScope
+-import com.example.firstapp.model.Item
++import com.example.firstapp.model.GithubTrending
++import com.example.firstapp.network.ApiInstance
+ import com.example.firstapp.network.ApiService
+-import kotlinx.coroutines.flow.MutableStateFlow
+-import kotlinx.coroutines.flow.StateFlow
++import kotlinx.coroutines.Dispatchers
+ import kotlinx.coroutines.launch
+ 
+ class PostViewModel : ViewModel() {
+ 
+-    val postListResponse: MutableStateFlow<List<Item>> = MutableStateFlow(listOf<Item>())
+-    var errorMessage: String by mutableStateOf("ErrorMessage")
++    private  var recyclerListLiveData : MutableLiveData<GithubTrending> = MutableLiveData()
++    fun getRecyclerListObserver(): MutableLiveData<GithubTrending>{
++        return recyclerListLiveData
++    }
+ 
+-    fun getPostsList() {
+-        viewModelScope.launch {
+-            val apiService = ApiService.getInstance()
+-            try {
+-                val repoList = apiService.getPosts()
+-                postListResponse.emit(repoList.items)
+-                Log.d("Lista", repoList.toString())
+-            } catch (e: Exception) {
+-                errorMessage = e.message.toString()
+-                Log.e("PostViewModel", " ", e)
+-            }
++    fun makeApiCall(){
++        viewModelScope.launch(Dispatchers.IO){
++          val retrofitInstance = ApiInstance.getRetroInstance().create(ApiService::class.java)
++          val response =  retrofitInstance.getDataFromApi("android")
++            recyclerListLiveData.postValue(response)
++
+         }
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/java/com/example/firstapp/network/ApiService.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.firstapp.network\n\nimport com.example.firstapp.model.GithubTrending\nimport com.example.firstapp.model.Post\nimport retrofit2.Retrofit\nimport retrofit2.converter.gson.GsonConverterFactory\nimport retrofit2.http.GET\n\ninterface ApiService {\n    @GET(\"search/repositories?q=android\")\n    suspend fun getPosts(): GithubTrending\n    companion object {\n        var apiService: ApiService? = null\n        fun getInstance(): ApiService {\n            if (apiService == null) {\n                apiService = Retrofit.Builder()\n                    .baseUrl(\"https://api.github.com/\")\n                    .addConverterFactory(GsonConverterFactory.create())\n                    .build().create(ApiService::class.java)\n\n            }\n            return apiService!!\n        }\n    }\n}
+===================================================================
+diff --git a/app/src/main/java/com/example/firstapp/network/ApiService.kt b/app/src/main/java/com/example/firstapp/network/ApiService.kt
+--- a/app/src/main/java/com/example/firstapp/network/ApiService.kt	
++++ b/app/src/main/java/com/example/firstapp/network/ApiService.kt	
+@@ -1,25 +1,11 @@
+ package com.example.firstapp.network
+ 
+ import com.example.firstapp.model.GithubTrending
+-import com.example.firstapp.model.Post
+-import retrofit2.Retrofit
+-import retrofit2.converter.gson.GsonConverterFactory
+ import retrofit2.http.GET
++import retrofit2.http.Query
+ 
+ interface ApiService {
+-    @GET("search/repositories?q=android")
+-    suspend fun getPosts(): GithubTrending
+-    companion object {
+-        var apiService: ApiService? = null
+-        fun getInstance(): ApiService {
+-            if (apiService == null) {
+-                apiService = Retrofit.Builder()
+-                    .baseUrl("https://api.github.com/")
+-                    .addConverterFactory(GsonConverterFactory.create())
+-                    .build().create(ApiService::class.java)
++    @GET("repositories")
++    suspend fun getDataFromApi(@Query("q") query : String): GithubTrending
+ 
+-            }
+-            return apiService!!
+-        }
+     }
+-}
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\n    <string name=\"app_name\">FirstApp</string>\n</resources>
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	
++++ b/app/src/main/res/values/strings.xml	
+@@ -1,3 +1,6 @@
+ <resources>
+     <string name="app_name">FirstApp</string>
++    <!-- TODO: Remove or change this placeholder text -->
++    <string name="hello_blank_fragment">Hello blank fragment</string>
++    <string name="profilepicture">ProfilePicture</string>
+ </resources>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"DesignSurface\">\n    <option name=\"filePathToZoomLevelMap\">\n      <map>\n        <entry key=\"app/src/main/res/drawable-v24/ic_launcher_foreground.xml\" value=\"0.1\" />\n        <entry key=\"app/src/main/res/drawable/ic_launcher_background.xml\" value=\"0.1\" />\n      </map>\n    </option>\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"Android Studio default JDK\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\n  </component>\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"Android\" />\n  </component>\n</project>
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -5,6 +5,10 @@
+       <map>
+         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
++        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
++        <entry key="app/src/main/res/layout/fragment_recycler_list.xml" value="0.171875" />
++        <entry key="app/src/main/res/layout/homescreen.xml" value="0.25" />
++        <entry key="app/src/main/res/layout/recycler_list_row.xml" value="0.1859375" />
+       </map>
+     </option>
+   </component>
+Index: settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>pluginManagement {\n    repositories {\n        gradlePluginPortal()\n        google()\n        mavenCentral()\n    }\n}\ndependencyResolutionManagement {\n    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)\n    repositories {\n        google()\n        mavenCentral()\n    }\n}\nrootProject.name = \"FirstApp\"\ninclude ':app'\n
+===================================================================
+diff --git a/settings.gradle b/settings.gradle
+--- a/settings.gradle	
++++ b/settings.gradle	
+@@ -6,10 +6,11 @@
+     }
+ }
+ dependencyResolutionManagement {
+-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
++    //repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+     repositories {
+         google()
+         mavenCentral()
++        maven{url 'https://jitpack.io'}
+     }
+ }
+ rootProject.name = "FirstApp"
+Index: app/src/main/java/com/example/firstapp/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.firstapp\n\nimport android.os.Bundle\nimport android.util.Log\nimport androidx.activity.ComponentActivity\nimport androidx.activity.compose.setContent\nimport androidx.activity.viewModels\nimport androidx.compose.foundation.lazy.LazyColumn\nimport androidx.compose.foundation.lazy.itemsIndexed\nimport androidx.compose.material.MaterialTheme\nimport androidx.compose.material.Surface\nimport androidx.compose.runtime.Composable\nimport androidx.compose.ui.tooling.preview.Preview\nimport com.example.firstapp.View.RepoItem\nimport com.example.firstapp.model.GithubTrending\nimport com.example.firstapp.model.Item\nimport com.example.firstapp.model.Post\nimport com.example.firstapp.ui.theme.FirstAppTheme\nimport com.example.firstapp.viewModel.PostViewModel\nimport kotlinx.coroutines.flow.StateFlow\n\nclass MainActivity : ComponentActivity() {\n\n    private val postViewModel by viewModels<PostViewModel>()\n    override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate(savedInstanceState)\n        postViewModel.getPostsList()\n        setContent {\n            FirstAppTheme {\n                // A surface container using the 'background' color from the theme\n                Surface(\n                    color = MaterialTheme.colors.background\n                ) {\n                    RepoList(repoList = postViewModel.postListResponse)\n                }\n            }\n        }\n    }\n}\n\n@Composable\nfun RepoList(repoList: StateFlow<List<Item>>){\n    LazyColumn{\n        itemsIndexed(items = repoList.value){\n            _, item ->  RepoItem(post = item)\n        }\n    }\n    \n    \n}\n@Preview(showBackground = true)\n@Composable\nfun DefaultPreview() {\n    FirstAppTheme {\n    }\n}
+===================================================================
+diff --git a/app/src/main/java/com/example/firstapp/MainActivity.kt b/app/src/main/java/com/example/firstapp/MainActivity.kt
+--- a/app/src/main/java/com/example/firstapp/MainActivity.kt	
++++ b/app/src/main/java/com/example/firstapp/MainActivity.kt	
+@@ -2,55 +2,25 @@
+ 
+ import android.os.Bundle
+ import android.util.Log
+-import androidx.activity.ComponentActivity
+-import androidx.activity.compose.setContent
+-import androidx.activity.viewModels
+-import androidx.compose.foundation.lazy.LazyColumn
+-import androidx.compose.foundation.lazy.itemsIndexed
+-import androidx.compose.material.MaterialTheme
+-import androidx.compose.material.Surface
+-import androidx.compose.runtime.Composable
+-import androidx.compose.ui.tooling.preview.Preview
+-import com.example.firstapp.View.RepoItem
+-import com.example.firstapp.model.GithubTrending
+-import com.example.firstapp.model.Item
+-import com.example.firstapp.model.Post
+-import com.example.firstapp.ui.theme.FirstAppTheme
+-import com.example.firstapp.viewModel.PostViewModel
+-import kotlinx.coroutines.flow.StateFlow
++import androidx.appcompat.app.AppCompatActivity
++import androidx.fragment.app.FragmentManager
++import androidx.fragment.app.FragmentTransaction
+ 
+-class MainActivity : ComponentActivity() {
++class MainActivity : AppCompatActivity() {
+ 
+-    private val postViewModel by viewModels<PostViewModel>()
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+-        postViewModel.getPostsList()
+-        setContent {
+-            FirstAppTheme {
+-                // A surface container using the 'background' color from the theme
+-                Surface(
+-                    color = MaterialTheme.colors.background
+-                ) {
+-                    RepoList(repoList = postViewModel.postListResponse)
+-                }
+-            }
+-        }
+-    }
+-}
+-
+-@Composable
+-fun RepoList(repoList: StateFlow<List<Item>>){
+-    LazyColumn{
+-        itemsIndexed(items = repoList.value){
+-            _, item ->  RepoItem(post = item)
+-        }
++        setContentView(R.layout.activity_main)
++        setupFragment()
+     }
+-    
+-    
+-}
+-@Preview(showBackground = true)
+-@Composable
+-fun DefaultPreview() {
+-    FirstAppTheme {
+-    }
+-}
+\ No newline at end of file
++
++    private fun setupFragment(){
++        val fragment = RecyclerListFragment.newInstance()
++        val fragmentManager : FragmentManager = supportFragmentManager
++        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
++        fragmentTransaction.replace(android.R.id.content, fragment)
++        fragmentTransaction.commit()
++
++    }
++}
++
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>buildscript {\n    ext {\n        compose_version = '1.1.0-beta01'\n    }\n}// Top-level build file where you can add configuration options common to all sub-projects/modules.\nplugins {\n    id 'com.android.application' version '7.2.1' apply false\n    id 'com.android.library' version '7.2.1' apply false\n    id 'org.jetbrains.kotlin.android' version '1.5.31' apply false\n}\n\ntask clean(type: Delete) {\n    delete rootProject.buildDir\n}
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	
++++ b/build.gradle	
+@@ -2,13 +2,17 @@
+     ext {
+         compose_version = '1.1.0-beta01'
+     }
++
++    dependencies {
++        classpath 'com.android.tools.build:gradle:7.1.3'
++    }
+ }// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ plugins {
+     id 'com.android.application' version '7.2.1' apply false
+     id 'com.android.library' version '7.2.1' apply false
+-    id 'org.jetbrains.kotlin.android' version '1.5.31' apply false
++    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+ }
+ 
+ task clean(type: Delete) {
+     delete rootProject.buildDir
+-}
+\ No newline at end of file
++}
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\n    id 'com.android.application'\n    id 'org.jetbrains.kotlin.android'\n}\n\nandroid {\n    compileSdk 32\n\n    defaultConfig {\n        applicationId \"com.example.firstapp\"\n        minSdk 21\n        targetSdk 32\n        versionCode 1\n        versionName \"1.0\"\n\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\n        vectorDrawables {\n            useSupportLibrary true\n        }\n    }\n\n    buildTypes {\n        release {\n            minifyEnabled false\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\n        }\n    }\n    compileOptions {\n        sourceCompatibility JavaVersion.VERSION_1_8\n        targetCompatibility JavaVersion.VERSION_1_8\n    }\n    kotlinOptions {\n        jvmTarget = '1.8'\n    }\n    buildFeatures {\n        compose true\n    }\n    composeOptions {\n        kotlinCompilerExtensionVersion compose_version\n    }\n    packagingOptions {\n        resources {\n            excludes += '/META-INF/{AL2.0,LGPL2.1}'\n        }\n    }\n}\n\ndependencies {\n\n    implementation 'androidx.core:core-ktx:1.7.0'\n    implementation \"androidx.compose.ui:ui:$compose_version\"\n    implementation \"androidx.compose.material:material:$compose_version\"\n    implementation \"androidx.compose.ui:ui-tooling-preview:$compose_version\"\n    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'\n    implementation 'androidx.activity:activity-compose:1.3.1'\n    testImplementation 'junit:junit:4.13.2'\n    androidTestImplementation 'androidx.test.ext:junit:1.1.3'\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'\n    androidTestImplementation \"androidx.compose.ui:ui-test-junit4:$compose_version\"\n    debugImplementation \"androidx.compose.ui:ui-tooling:$compose_version\"\n    debugImplementation \"androidx.compose.ui:ui-test-manifest:$compose_version\"\n\n    // retrofit\n    implementation 'com.squareup.retrofit2:retrofit:2.9.0'\n    implementation \"com.squareup.okhttp3:okhttp:5.0.0-alpha.2\"\n    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'\n    // coil\n    implementation \"io.coil-kt:coil-compose:2.1.0\"\n}
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	
++++ b/app/build.gradle	
+@@ -25,10 +25,6 @@
+             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+         }
+     }
+-    compileOptions {
+-        sourceCompatibility JavaVersion.VERSION_1_8
+-        targetCompatibility JavaVersion.VERSION_1_8
+-    }
+     kotlinOptions {
+         jvmTarget = '1.8'
+     }
+@@ -36,7 +32,7 @@
+         compose true
+     }
+     composeOptions {
+-        kotlinCompilerExtensionVersion compose_version
++        kotlinCompilerExtensionVersion '1.1.1'
+     }
+     packagingOptions {
+         resources {
+@@ -53,11 +49,21 @@
+     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+     implementation 'androidx.activity:activity-compose:1.3.1'
++    implementation 'androidx.recyclerview:recyclerview:1.2.1'
++    implementation 'com.squareup.picasso:picasso:2.71828'
++    implementation 'androidx.appcompat:appcompat:1.4.2'
++    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
++    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
++
++
+     testImplementation 'junit:junit:4.13.2'
+     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
++    //noinspection GradleDependency
+     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
++    //noinspection GradleDependency
+     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
++    //noinspection GradleDependency
+     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+ 
+     // retrofit
+@@ -65,5 +71,5 @@
+     implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
+     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+     // coil
+-    implementation "io.coil-kt:coil-compose:2.1.0"
++    implementation "androidx.compose.runtime:runtime-livedata:1.2.0"
+ }
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"VcsDirectoryMappings\">\n    <mapping directory=\"$PROJECT_DIR$/..\" vcs=\"Git\" />\n  </component>\n</project>
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+--- a/.idea/vcs.xml	
++++ b/.idea/vcs.xml	
+@@ -2,5 +2,6 @@
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: gradle.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Project-wide Gradle settings.\n# IDE (e.g. Android Studio) users:\n# Gradle settings configured through the IDE *will override*\n# any settings specified in this file.\n# For more details on how to configure your build environment visit\n# http://www.gradle.org/docs/current/userguide/build_environment.html\n# Specifies the JVM arguments used for the daemon process.\n# The setting is particularly useful for tweaking memory settings.\norg.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8\n# When configured, Gradle will run in incubating parallel mode.\n# This option should only be used with decoupled projects. More details, visit\n# http://www.gradle.org/docs/current/userguide/multi_project_builds.html#sec:decoupled_projects\n# org.gradle.parallel=true\n# AndroidX package structure to make it clearer which packages are bundled with the\n# Android operating system, and which are packaged with your app\"s APK\n# https://developer.android.com/topic/libraries/support-library/androidx-rn\nandroid.useAndroidX=true\n# Kotlin code style for this project: \"official\" or \"obsolete\":\nkotlin.code.style=official\n# Enables namespacing of each library's R class so that its R class includes only the\n# resources declared in the library itself and none from the library's dependencies,\n# thereby reducing the size of the R class for that library\nandroid.nonTransitiveRClass=true
+===================================================================
+diff --git a/gradle.properties b/gradle.properties
+--- a/gradle.properties	
++++ b/gradle.properties	
+@@ -20,4 +20,5 @@
+ # Enables namespacing of each library's R class so that its R class includes only the
+ # resources declared in the library itself and none from the library's dependencies,
+ # thereby reducing the size of the R class for that library
+-android.nonTransitiveRClass=true
+\ No newline at end of file
++android.nonTransitiveRClass=true
++android.enableJetifier=true
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    package=\"com.example.firstapp\">\n    <uses-permission android:name=\"android.permission.INTERNET\"/>\n    <uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />\n\n    <application\n        android:allowBackup=\"true\"\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\n        android:fullBackupContent=\"@xml/backup_rules\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"@string/app_name\"\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/Theme.FirstApp\"\n        tools:targetApi=\"31\">\n        <activity\n            android:name=\".MainActivity\"\n            android:exported=\"true\"\n            android:label=\"@string/app_name\"\n            android:theme=\"@style/Theme.FirstApp\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n    </application>\n\n</manifest>
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	
++++ b/app/src/main/AndroidManifest.xml	
+@@ -4,7 +4,6 @@
+     package="com.example.firstapp">
+     <uses-permission android:name="android.permission.INTERNET"/>
+     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+-
+     <application
+         android:allowBackup="true"
+         android:dataExtractionRules="@xml/data_extraction_rules"
+@@ -13,13 +12,11 @@
+         android:label="@string/app_name"
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+-        android:theme="@style/Theme.FirstApp"
++        android:theme="@style/Theme.AppCompat.Light"
+         tools:targetApi="31">
+         <activity
+             android:name=".MainActivity"
+-            android:exported="true"
+-            android:label="@string/app_name"
+-            android:theme="@style/Theme.FirstApp">
++            android:exported="true">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+ 

@@ -1,0 +1,129 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.firstapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:5:5-66
+11-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+12-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:6:5-76
+12-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:6:22-73
+13
+14    <application
+14-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:7:5-26:19
+15        android:allowBackup="true"
+15-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:8:9-35
+16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+16-->[androidx.core:core:1.7.0] /home/ratko/.gradle/caches/transforms-3/2d10e326ee8d2c1713772ce33ded5b9f/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+17        android:dataExtractionRules="@xml/data_extraction_rules"
+17-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:9:9-65
+18        android:debuggable="true"
+19        android:fullBackupContent="@xml/backup_rules"
+19-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:10:9-54
+20        android:icon="@mipmap/ic_launcher"
+20-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:11:9-43
+21        android:label="@string/app_name"
+21-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:12:9-41
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:13:9-54
+23        android:supportsRtl="true"
+23-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:14:9-35
+24        android:testOnly="true"
+25        android:theme="@style/Theme.AppCompat.Light" >
+25-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:15:9-53
+26        <activity
+26-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:17:9-25:20
+27            android:name="com.example.firstapp.MainActivity"
+27-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:18:13-41
+28            android:exported="true" >
+28-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:19:13-36
+29            <intent-filter>
+29-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:20:13-24:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:21:17-69
+30-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:21:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:23:17-77
+32-->/home/ratko/Desktop/AndroidCourse/firstProject/FirstApp/app/src/main/AndroidManifest.xml:23:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity
+35-->[androidx.compose.ui:ui-tooling:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/ece735d8e1716131a090c185ff4c9256/transformed/jetified-ui-tooling-1.1.0-beta01/AndroidManifest.xml:25:9-27:39
+36            android:name="androidx.compose.ui.tooling.PreviewActivity"
+36-->[androidx.compose.ui:ui-tooling:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/ece735d8e1716131a090c185ff4c9256/transformed/jetified-ui-tooling-1.1.0-beta01/AndroidManifest.xml:26:13-71
+37            android:exported="true" />
+37-->[androidx.compose.ui:ui-tooling:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/ece735d8e1716131a090c185ff4c9256/transformed/jetified-ui-tooling-1.1.0-beta01/AndroidManifest.xml:27:13-36
+38        <activity
+38-->[androidx.compose.ui:ui-test-manifest:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/f93b11fbfec6b38d7c6aa1af37fbdd0b/transformed/jetified-ui-test-manifest-1.1.0-beta01/AndroidManifest.xml:25:9-27:39
+39            android:name="androidx.activity.ComponentActivity"
+39-->[androidx.compose.ui:ui-test-manifest:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/f93b11fbfec6b38d7c6aa1af37fbdd0b/transformed/jetified-ui-test-manifest-1.1.0-beta01/AndroidManifest.xml:26:13-63
+40            android:exported="true" />
+40-->[androidx.compose.ui:ui-test-manifest:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/f93b11fbfec6b38d7c6aa1af37fbdd0b/transformed/jetified-ui-test-manifest-1.1.0-beta01/AndroidManifest.xml:27:13-36
+41
+42        <provider
+42-->[com.squareup.picasso:picasso:2.71828] /home/ratko/.gradle/caches/transforms-3/3a9031097114296d24e316069f11b86e/transformed/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+43            android:name="com.squareup.picasso.PicassoProvider"
+43-->[com.squareup.picasso:picasso:2.71828] /home/ratko/.gradle/caches/transforms-3/3a9031097114296d24e316069f11b86e/transformed/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+44            android:authorities="com.example.firstapp.com.squareup.picasso"
+44-->[com.squareup.picasso:picasso:2.71828] /home/ratko/.gradle/caches/transforms-3/3a9031097114296d24e316069f11b86e/transformed/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+45            android:exported="false" />
+45-->[com.squareup.picasso:picasso:2.71828] /home/ratko/.gradle/caches/transforms-3/3a9031097114296d24e316069f11b86e/transformed/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+46        <provider
+46-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/4fe44f87e156e4e122ce4bccd7ad2c79/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+47            android:name="androidx.startup.InitializationProvider"
+47-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/4fe44f87e156e4e122ce4bccd7ad2c79/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+48            android:authorities="com.example.firstapp.androidx-startup"
+48-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/4fe44f87e156e4e122ce4bccd7ad2c79/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+49            android:exported="false" >
+49-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/4fe44f87e156e4e122ce4bccd7ad2c79/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+50            <meta-data
+50-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/4fe44f87e156e4e122ce4bccd7ad2c79/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+51                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+51-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/4fe44f87e156e4e122ce4bccd7ad2c79/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+52                android:value="androidx.startup" />
+52-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/4fe44f87e156e4e122ce4bccd7ad2c79/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+53            <meta-data
+53-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/c89808ae59685e90f2b1c834594d945c/transformed/jetified-profileinstaller-1.1.0-beta01/AndroidManifest.xml:31:13-33:52
+54                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+54-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/c89808ae59685e90f2b1c834594d945c/transformed/jetified-profileinstaller-1.1.0-beta01/AndroidManifest.xml:32:17-85
+55                android:value="androidx.startup" />
+55-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/c89808ae59685e90f2b1c834594d945c/transformed/jetified-profileinstaller-1.1.0-beta01/AndroidManifest.xml:33:17-49
+56            <meta-data
+56-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/dd1960d8466547bc6fb059a29e518788/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+57                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+57-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/dd1960d8466547bc6fb059a29e518788/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+58                android:value="androidx.startup" />
+58-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/dd1960d8466547bc6fb059a29e518788/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+59        </provider>
+60
+61        <receiver
+61-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/c89808ae59685e90f2b1c834594d945c/transformed/jetified-profileinstaller-1.1.0-beta01/AndroidManifest.xml:36:9-45:20
+62            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+62-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/c89808ae59685e90f2b1c834594d945c/transformed/jetified-profileinstaller-1.1.0-beta01/AndroidManifest.xml:37:13-76
+63            android:directBootAware="false"
+63-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/c89808ae59685e90f2b1c834594d945c/transformed/jetified-profileinstaller-1.1.0-beta01/AndroidManifest.xml:38:13-44
+64            android:enabled="true"
+64-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/c89808ae59685e90f2b1c834594d945c/transformed/jetified-profileinstaller-1.1.0-beta01/AndroidManifest.xml:39:13-35
+65            android:exported="true"
+65-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/c89808ae59685e90f2b1c834594d945c/transformed/jetified-profileinstaller-1.1.0-beta01/AndroidManifest.xml:40:13-36
+66            android:permission="android.permission.DUMP" >
+66-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/c89808ae59685e90f2b1c834594d945c/transformed/jetified-profileinstaller-1.1.0-beta01/AndroidManifest.xml:41:13-57
+67            <intent-filter>
+67-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/c89808ae59685e90f2b1c834594d945c/transformed/jetified-profileinstaller-1.1.0-beta01/AndroidManifest.xml:42:13-44:29
+68                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+68-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/c89808ae59685e90f2b1c834594d945c/transformed/jetified-profileinstaller-1.1.0-beta01/AndroidManifest.xml:43:17-91
+68-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/ratko/.gradle/caches/transforms-3/c89808ae59685e90f2b1c834594d945c/transformed/jetified-profileinstaller-1.1.0-beta01/AndroidManifest.xml:43:25-88
+69            </intent-filter>
+70        </receiver>
+71    </application>
+72
+73</manifest>
