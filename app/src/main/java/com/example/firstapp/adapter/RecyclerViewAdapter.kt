@@ -9,9 +9,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstapp.R
 import com.example.firstapp.model.Item
+import com.example.firstapp.ui.PostClickHandler
 import com.squareup.picasso.Picasso
 
-class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>(){
+class RecyclerViewAdapter(private val clickHandler : PostClickHandler) : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>(){
 
     var items : MutableList<Item> = mutableListOf()
 
@@ -21,10 +22,14 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolde
 
     }
 
-    class MyViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val imageThumb = view.findViewById<ImageView>(R.id.imageThumb)
-        val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
-        val tvDesc = view.findViewById<TextView>(R.id.tvDesc)
+    inner class MyViewHolder(view: View): RecyclerView.ViewHolder(view), View.OnClickListener{
+        val imageThumb = view.findViewById<ImageView>(R.id.item_image)
+        val tvTitle = view.findViewById<TextView>(R.id.item_title)
+        val tvDesc = view.findViewById<TextView>(R.id.item_desc)
+
+        init{
+            view.setOnClickListener(this)
+        }
 
         fun bind(data: Item) {
             tvTitle.text = data.fullName
@@ -37,10 +42,15 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolde
                 .into(imageThumb)
         }
 
+        override fun onClick(p0: View?) {
+            val currentRepo = items[adapterPosition]
+            clickHandler.clickedPostItem(currentRepo)
+        }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_list_row,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_layout,parent,false)
 
         return MyViewHolder(view)
     }

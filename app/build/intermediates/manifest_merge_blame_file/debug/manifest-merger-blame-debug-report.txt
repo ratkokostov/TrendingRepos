@@ -22,7 +22,7 @@
 15        android:allowBackup="true"
 15-->/home/ratko/Desktop/AndroidCourse/firstProject/app/src/main/AndroidManifest.xml:10:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-16-->[androidx.core:core:1.7.0] /home/ratko/.gradle/caches/transforms-3/ae9616d13e5213c0aa09c43a28ce0756/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+16-->[androidx.core:core:1.8.0] /home/ratko/.gradle/caches/transforms-3/065dfa018132f0a621878cd66243e674/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
 17        android:dataExtractionRules="@xml/data_extraction_rules"
 17-->/home/ratko/Desktop/AndroidCourse/firstProject/app/src/main/AndroidManifest.xml:11:9-65
 18        android:debuggable="true"
@@ -57,35 +57,48 @@
 33            </intent-filter>
 34        </activity>
 35
-36        <provider
-36-->[com.squareup.picasso:picasso:2.8] /home/ratko/.gradle/caches/transforms-3/c56564837745d7396b3fa5bc5cc8111b/transformed/picasso-2.8/AndroidManifest.xml:8:9-11:40
-37            android:name="com.squareup.picasso.PicassoProvider"
-37-->[com.squareup.picasso:picasso:2.8] /home/ratko/.gradle/caches/transforms-3/c56564837745d7396b3fa5bc5cc8111b/transformed/picasso-2.8/AndroidManifest.xml:9:13-64
-38            android:authorities="com.example.firstapp.com.squareup.picasso"
-38-->[com.squareup.picasso:picasso:2.8] /home/ratko/.gradle/caches/transforms-3/c56564837745d7396b3fa5bc5cc8111b/transformed/picasso-2.8/AndroidManifest.xml:10:13-72
-39            android:exported="false" />
-39-->[com.squareup.picasso:picasso:2.8] /home/ratko/.gradle/caches/transforms-3/c56564837745d7396b3fa5bc5cc8111b/transformed/picasso-2.8/AndroidManifest.xml:11:13-37
-40        <provider
-40-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-41            android:name="androidx.startup.InitializationProvider"
-41-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
-42            android:authorities="com.example.firstapp.androidx-startup"
-42-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
-43            android:exported="false" >
-43-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
-44            <meta-data
-44-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-45                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-45-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
-46                android:value="androidx.startup" />
-46-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
-47            <meta-data
-47-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/cb5baf6f6cd3c337c16cbd482c02d812/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-48                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-48-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/cb5baf6f6cd3c337c16cbd482c02d812/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-49                android:value="androidx.startup" />
-49-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/cb5baf6f6cd3c337c16cbd482c02d812/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-50        </provider>
-51    </application>
-52
-53</manifest>
+36        <uses-library
+36-->[androidx.window:window:1.0.0] /home/ratko/.gradle/caches/transforms-3/0f3eca9512f0eb9502afcb0282c13bf3/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+37            android:name="androidx.window.extensions"
+37-->[androidx.window:window:1.0.0] /home/ratko/.gradle/caches/transforms-3/0f3eca9512f0eb9502afcb0282c13bf3/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+38            android:required="false" />
+38-->[androidx.window:window:1.0.0] /home/ratko/.gradle/caches/transforms-3/0f3eca9512f0eb9502afcb0282c13bf3/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+39        <uses-library
+39-->[androidx.window:window:1.0.0] /home/ratko/.gradle/caches/transforms-3/0f3eca9512f0eb9502afcb0282c13bf3/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+40            android:name="androidx.window.sidecar"
+40-->[androidx.window:window:1.0.0] /home/ratko/.gradle/caches/transforms-3/0f3eca9512f0eb9502afcb0282c13bf3/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+41            android:required="false" />
+41-->[androidx.window:window:1.0.0] /home/ratko/.gradle/caches/transforms-3/0f3eca9512f0eb9502afcb0282c13bf3/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+42
+43        <provider
+43-->[com.squareup.picasso:picasso:2.8] /home/ratko/.gradle/caches/transforms-3/c56564837745d7396b3fa5bc5cc8111b/transformed/picasso-2.8/AndroidManifest.xml:8:9-11:40
+44            android:name="com.squareup.picasso.PicassoProvider"
+44-->[com.squareup.picasso:picasso:2.8] /home/ratko/.gradle/caches/transforms-3/c56564837745d7396b3fa5bc5cc8111b/transformed/picasso-2.8/AndroidManifest.xml:9:13-64
+45            android:authorities="com.example.firstapp.com.squareup.picasso"
+45-->[com.squareup.picasso:picasso:2.8] /home/ratko/.gradle/caches/transforms-3/c56564837745d7396b3fa5bc5cc8111b/transformed/picasso-2.8/AndroidManifest.xml:10:13-72
+46            android:exported="false" />
+46-->[com.squareup.picasso:picasso:2.8] /home/ratko/.gradle/caches/transforms-3/c56564837745d7396b3fa5bc5cc8111b/transformed/picasso-2.8/AndroidManifest.xml:11:13-37
+47        <provider
+47-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+48            android:name="androidx.startup.InitializationProvider"
+48-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+49            android:authorities="com.example.firstapp.androidx-startup"
+49-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+50            android:exported="false" >
+50-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+51            <meta-data
+51-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+52                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+52-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+53                android:value="androidx.startup" />
+53-->[androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+54            <meta-data
+54-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/cb5baf6f6cd3c337c16cbd482c02d812/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+55                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+55-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/cb5baf6f6cd3c337c16cbd482c02d812/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+56                android:value="androidx.startup" />
+56-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/cb5baf6f6cd3c337c16cbd482c02d812/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+57        </provider>
+58    </application>
+59
+60</manifest>

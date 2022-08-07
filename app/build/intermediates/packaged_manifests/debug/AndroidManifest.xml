@@ -33,6 +33,13 @@
             </intent-filter>
         </activity>
 
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+
         <provider
             android:name="com.squareup.picasso.PicassoProvider"
             android:authorities="com.example.firstapp.com.squareup.picasso"
