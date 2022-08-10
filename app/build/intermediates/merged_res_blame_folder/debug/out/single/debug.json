@@ -1,7 +1,19 @@
 [
     {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/layout_fragment_repo_detail.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/layout/fragment_repo_detail.xml"
+    },
+    {
         "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/mipmap-hdpi_ic_launcher.webp.flat",
         "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/xml_backup_rules.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/navigation_nav_graph.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/navigation/nav_graph.xml"
     },
     {
         "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/mipmap-mdpi_ic_launcher_round.webp.flat",
@@ -16,12 +28,20 @@
         "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
         "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/layout_activity_main.xml.flat",
         "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/layout/activity_main.xml"
     },
     {
         "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/layout_recycler_list_row.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/layout/recycler_list_row.xml"
     },
     {
         "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
@@ -36,6 +56,14 @@
         "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/layout_fragment_recycler_list.xml.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/layout/fragment_recycler_list.xml"
+    },
+    {
         "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/xml_data_extraction_rules.xml.flat",
         "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/xml/data_extraction_rules.xml"
     },
@@ -48,38 +76,6 @@
         "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/layout/card_layout.xml"
     },
     {
-        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/mipmap-xxhdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/layout_fragment_repo_detail.xml.flat",
-        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/layout/fragment_repo_detail.xml"
-    },
-    {
-        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/xml_backup_rules.xml.flat",
-        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/xml/backup_rules.xml"
-    },
-    {
-        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/navigation_nav_graph.xml.flat",
-        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/navigation/nav_graph.xml"
-    },
-    {
-        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/mipmap-xxxhdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/layout_recycler_list_row.xml.flat",
-        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/layout/recycler_list_row.xml"
-    },
-    {
-        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
-    },
-    {
-        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/layout_fragment_recycler_list.xml.flat",
-        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/layout/fragment_recycler_list.xml"
-    },
-    {
         "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
@@ -88,8 +84,8 @@
         "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.firstapp-merged_res-45:/layout_fragment_recycler_list.xml.flat",
-        "source": "com.example.firstapp-main-47:/layout/fragment_recycler_list.xml"
+        "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-main-47:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
         "merged": "/home/ratko/.gradle/daemon/7.3.3/com.example.firstapp-merged_res-45:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",

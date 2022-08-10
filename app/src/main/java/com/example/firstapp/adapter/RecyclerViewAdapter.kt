@@ -24,7 +24,7 @@ class RecyclerViewAdapter(private val clickHandler : PostClickHandler) : Recycle
 
     inner class MyViewHolder(view: View): RecyclerView.ViewHolder(view), View.OnClickListener{
         val imageThumb = view.findViewById<ImageView>(R.id.item_image)
-        val tvTitle = view.findViewById<TextView>(R.id.item_title)
+        val tvTitle =  view.findViewById<TextView>(R.id.item_title)
         val tvDesc = view.findViewById<TextView>(R.id.item_desc)
 
         init{

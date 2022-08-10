@@ -12,7 +12,6 @@ drawable ic_launcher_foreground
 id action_recyclerListFragment_to_repoDetailFragment
 id card_view
 id container
-id imageThumb
 id item_desc
 id item_image
 id item_title
@@ -21,13 +20,10 @@ id recyclerListFragment
 id recyclerView
 id relativeLayout
 id repoDetailFragment
-id tvDesc
-id tvTitle
 layout activity_main
 layout card_layout
 layout fragment_recycler_list
 layout fragment_repo_detail
-layout recycler_list_row
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph
