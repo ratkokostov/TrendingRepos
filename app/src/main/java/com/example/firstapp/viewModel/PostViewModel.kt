@@ -11,20 +11,21 @@ import kotlinx.coroutines.launch
 
 class PostViewModel : ViewModel() {
 
-      lateinit var recyclerListLiveData : MutableLiveData<GithubTrending>
-      init{
-          recyclerListLiveData = MutableLiveData()
-      }
+    lateinit var recyclerListLiveData: MutableLiveData<GithubTrending>
+
+    init {
+        recyclerListLiveData = MutableLiveData()
+    }
 
 
-    fun getRecyclerListObserver(): MutableLiveData<GithubTrending>{
+    fun getRecyclerListObserver(): MutableLiveData<GithubTrending> {
         return recyclerListLiveData
     }
 
-    fun makeApiCall(){
-        viewModelScope.launch(Dispatchers.IO){
-          val retrofitInstance = ApiInstance.getRetroInstance().create(ApiService::class.java)
-          val response =  retrofitInstance.getDataFromApi("android")
+    fun makeApiCall() {
+        viewModelScope.launch(Dispatchers.IO) {
+            val retrofitInstance = ApiInstance.getRetroInstance().create(ApiService::class.java)
+            val response = retrofitInstance.getDataFromApi("android")
             recyclerListLiveData.postValue(response)
 
         }

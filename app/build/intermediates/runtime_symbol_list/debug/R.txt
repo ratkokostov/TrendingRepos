@@ -2702,6 +2702,7 @@ int id currentState 0x7f080089
 int id custom 0x7f08008a
 int id customPanel 0x7f08008b
 int id cut 0x7f08008c
+int id dataBinding 0x7f0801fe
 int id date_picker_actions 0x7f08008d
 int id decelerate 0x7f08008e
 int id decelerateAndComplete 0x7f08008f
@@ -2890,6 +2891,8 @@ int id notification_main_column 0x7f080142
 int id notification_main_column_container 0x7f080143
 int id off 0x7f080144
 int id on 0x7f080145
+int id onAttachStateChangeListener 0x7f0801ff
+int id onDateChanged 0x7f080200
 int id onInterceptTouchReturnSwipe 0x7f080146
 int id outline 0x7f080147
 int id outward 0x7f080148
@@ -3013,6 +3016,7 @@ int id textSpacerNoButtons 0x7f0801b7
 int id textSpacerNoTitle 0x7f0801b8
 int id textStart 0x7f0801b9
 int id textTop 0x7f0801ba
+int id textWatcher 0x7f080201
 int id text_input_end_icon 0x7f0801bb
 int id text_input_error_icon 0x7f0801bc
 int id text_input_start_icon 0x7f0801bd

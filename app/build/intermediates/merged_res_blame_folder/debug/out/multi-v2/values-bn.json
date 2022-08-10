@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.firstapp-mergeDebugResources-43:/values-bn/values-bn.xml",
+            "outputFile": "com.example.firstapp-mergeDebugResources-45:/values-bn/values-bn.xml",
             "map": [
                 {
                     "source": "/home/ratko/.gradle/caches/transforms-3/89a3c73b279e50600cd3d487ca7136b2/transformed/navigation-ui-2.5.1/res/values-bn/values-bn.xml",
