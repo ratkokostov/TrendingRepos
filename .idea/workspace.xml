@@ -17,7 +17,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bac6373f-1e11-4c49-aad8-f54375bb832b" name="Changes" comment="Added CardView">
+    <list default="true" id="bac6373f-1e11-4c49-aad8-f54375bb832b" name="Changes" comment="Change from FindById to Binding">
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/checksums/sha1-checksums.bin" afterDir="false" />
@@ -297,6 +297,7 @@
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/firstapp/adapter/RecyclerViewAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/firstapp/adapter/RecyclerViewAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/firstapp/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/firstapp/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/firstapp/adapter/RecyclerViewAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/firstapp/adapter/RecyclerViewAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/firstapp/viewModel/PostViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/firstapp/viewModel/PostViewModel.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -477,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660134428013</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Change from FindById to Binding">
+      <created>1660139926011</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660139926012</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,6 +515,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Revert &quot;New Version&quot;&#10;&#10;This reverts commit c25987fe" />
     <MESSAGE value="Added CardView" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added CardView" />
+    <MESSAGE value="Change from FindById to Binding" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change from FindById to Binding" />
   </component>
 </project>
