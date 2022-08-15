@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.firstapp.model.GithubTrending
 import com.example.firstapp.network.ApiInstance
 import com.example.firstapp.network.ApiService
+import com.example.firstapp.repository.MainRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -18,9 +19,7 @@ class PostViewModel : ViewModel() {
 
     fun makeApiCall() {
         viewModelScope.launch(Dispatchers.IO) {
-            val retrofitInstance = ApiInstance.getRetroInstance().create(ApiService::class.java)
-            val response = retrofitInstance.getDataFromApi("android")
-            _recyclerListLiveData.postValue(response)
+            _recyclerListLiveData.postValue(MainRepository.getInstance().fetchOnlineData())
 
         }
     }
