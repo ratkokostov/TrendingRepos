@@ -12,9 +12,9 @@ import com.squareup.picasso.Picasso
 class RecyclerViewAdapter(private val clickHandler: PostClickHandler) :
     RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
 
-    var items: MutableList<Item> = mutableListOf()
-    fun setUpdatedData(items: MutableList<Item>) {
-        this.items = items
+    private val items: MutableList<Item> = mutableListOf()
+    fun setUpdatedData(items: List<Item>) {
+        this.items.addAll(items)
         notifyDataSetChanged()
 
     }
