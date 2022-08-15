@@ -4,9 +4,6 @@ ADDED from /home/ratko/Desktop/AndroidCourse/firstProject/app/src/main/AndroidMa
 INJECTED from /home/ratko/Desktop/AndroidCourse/firstProject/app/src/main/AndroidManifest.xml:2:1-30:12
 INJECTED from /home/ratko/Desktop/AndroidCourse/firstProject/app/src/main/AndroidManifest.xml:2:1-30:12
 INJECTED from /home/ratko/Desktop/AndroidCourse/firstProject/app/src/main/AndroidManifest.xml:2:1-30:12
-MERGED from [androidx.databinding:databinding-adapters:7.2.1] /home/ratko/.gradle/caches/transforms-3/3883c9b1d9a2ccfb31fbdd92161ff143/transformed/databinding-adapters-7.2.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.databinding:databinding-ktx:7.2.1] /home/ratko/.gradle/caches/transforms-3/ffe1b45e48156688a84ae35da271c9cf/transformed/databinding-ktx-7.2.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.databinding:databinding-runtime:7.2.1] /home/ratko/.gradle/caches/transforms-3/5082be3fcb4d3a71c6bba6b7cd85008d/transformed/databinding-runtime-7.2.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:viewbinding:7.2.1] /home/ratko/.gradle/caches/transforms-3/fb995b942b56858f90135c5b4992faaf/transformed/viewbinding-7.2.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.1] /home/ratko/.gradle/caches/transforms-3/18b32690f7c33ab15127a459df86e77f/transformed/navigation-fragment-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment:2.5.1] /home/ratko/.gradle/caches/transforms-3/e53d7b47366f603426b264cf46703f9e/transformed/navigation-fragment-2.5.1/AndroidManifest.xml:17:1-24:12
@@ -45,27 +42,26 @@ MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/ratko/.gr
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/ratko/.gradle/caches/transforms-3/8a28f6fc7c86637ecb8b2eaa0814fb47/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/ratko/.gradle/caches/transforms-3/bbe2ef28165f1d8ec5540b4ad1b9dfc6/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/ratko/.gradle/caches/transforms-3/76a16560d8975ea3074e416e43115e40/transformed/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /home/ratko/.gradle/caches/transforms-3/245c7ce68c6b2586b5e0792c6843bab5/transformed/lifecycle-livedata-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /home/ratko/.gradle/caches/transforms-3/97767184a7962056eb9ec5cdbf3bb537/transformed/lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /home/ratko/.gradle/caches/transforms-3/421875379423072fde53e6276813c60b/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /home/ratko/.gradle/caches/transforms-3/0fe94235d91417baa750edf08a6f2a54/transformed/lifecycle-service-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/cb5baf6f6cd3c337c16cbd482c02d812/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.startup:startup-runtime:1.0.0] /home/ratko/.gradle/caches/transforms-3/59d61b3c9c11baefb1ddcb4d69830534/transformed/startup-runtime-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/ratko/.gradle/caches/transforms-3/d4ea9862e322b1a874b7f9e594020021/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/ratko/.gradle/caches/transforms-3/e7fdc0b9d7d5b512d4130098ebe75354/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/ratko/.gradle/caches/transforms-3/8ece1a5450dc30815e1e80c220480ad0/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.1.0] /home/ratko/.gradle/caches/transforms-3/b65b4fc87f01c839f78c1fd56cce88cb/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.4.1] /home/ratko/.gradle/caches/transforms-3/03e45a5631613f3e743754c77b739101/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.8.0] /home/ratko/.gradle/caches/transforms-3/065dfa018132f0a621878cd66243e674/transformed/core-1.8.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /home/ratko/.gradle/caches/transforms-3/3e3a686cb0772c7f4033c461f452d013/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/ratko/.gradle/caches/transforms-3/54cc6d9921cfe427d67a889cfb975249/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /home/ratko/.gradle/caches/transforms-3/f4c51caf9fb605b48e612956bab12b07/transformed/savedstate-ktx-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.2.0] /home/ratko/.gradle/caches/transforms-3/ed907ea7ba53c58aeebc4079207b83f1/transformed/savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.startup:startup-runtime:1.0.0] /home/ratko/.gradle/caches/transforms-3/59d61b3c9c11baefb1ddcb4d69830534/transformed/startup-runtime-1.0.0/AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] /home/ratko/.gradle/caches/transforms-3/d4ea9862e322b1a874b7f9e594020021/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ratko/.gradle/caches/transforms-3/f72ec8c1212ab1337e686822dcea07a2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/ratko/.gradle/caches/transforms-3/672676c0506c6d442e9db27fee4e6188/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/ratko/.gradle/caches/transforms-3/ff22b9e6a56b2c03d54a8edb1b7dda14/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/ratko/.gradle/caches/transforms-3/6aad9dcd3aa9bc4c076e45642ff37f7a/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/ratko/.gradle/caches/transforms-3/41441b4c2106b5260e1152573c42cf87/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /home/ratko/.gradle/caches/transforms-3/f4c51caf9fb605b48e612956bab12b07/transformed/savedstate-ktx-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] /home/ratko/.gradle/caches/transforms-3/ed907ea7ba53c58aeebc4079207b83f1/transformed/savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /home/ratko/.gradle/caches/transforms-3/3e3a686cb0772c7f4033c461f452d013/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/ratko/.gradle/caches/transforms-3/85d5ffd9d14939152ff32b22b30ff04a/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /home/ratko/.gradle/caches/transforms-3/97767184a7962056eb9ec5cdbf3bb537/transformed/lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /home/ratko/.gradle/caches/transforms-3/421875379423072fde53e6276813c60b/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/ratko/.gradle/caches/transforms-3/54cc6d9921cfe427d67a889cfb975249/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/ratko/.gradle/caches/transforms-3/7ab702f009a5c29a1baf9a1fb5794136/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 INJECTED from /home/ratko/Desktop/AndroidCourse/firstProject/app/src/main/AndroidManifest.xml:2:1-30:12
 INJECTED from /home/ratko/Desktop/AndroidCourse/firstProject/app/src/main/AndroidManifest.xml:2:1-30:12
@@ -108,10 +104,10 @@ MERGED from [androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms
 MERGED from [androidx.emoji2:emoji2:1.0.0] /home/ratko/.gradle/caches/transforms-3/46f78acda5fcb3a1d65440954eeb5b73/transformed/emoji2-1.0.0/AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/cb5baf6f6cd3c337c16cbd482c02d812/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/cb5baf6f6cd3c337c16cbd482c02d812/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.core:core:1.8.0] /home/ratko/.gradle/caches/transforms-3/065dfa018132f0a621878cd66243e674/transformed/core-1.8.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.8.0] /home/ratko/.gradle/caches/transforms-3/065dfa018132f0a621878cd66243e674/transformed/core-1.8.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.startup:startup-runtime:1.0.0] /home/ratko/.gradle/caches/transforms-3/59d61b3c9c11baefb1ddcb4d69830534/transformed/startup-runtime-1.0.0/AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.0.0] /home/ratko/.gradle/caches/transforms-3/59d61b3c9c11baefb1ddcb4d69830534/transformed/startup-runtime-1.0.0/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.core:core:1.8.0] /home/ratko/.gradle/caches/transforms-3/065dfa018132f0a621878cd66243e674/transformed/core-1.8.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.8.0] /home/ratko/.gradle/caches/transforms-3/065dfa018132f0a621878cd66243e674/transformed/core-1.8.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ratko/.gradle/caches/transforms-3/f72ec8c1212ab1337e686822dcea07a2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ratko/.gradle/caches/transforms-3/f72ec8c1212ab1337e686822dcea07a2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
@@ -154,12 +150,6 @@ uses-sdk
 INJECTED from /home/ratko/Desktop/AndroidCourse/firstProject/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/ratko/Desktop/AndroidCourse/firstProject/app/src/main/AndroidManifest.xml
 INJECTED from /home/ratko/Desktop/AndroidCourse/firstProject/app/src/main/AndroidManifest.xml
-MERGED from [androidx.databinding:databinding-adapters:7.2.1] /home/ratko/.gradle/caches/transforms-3/3883c9b1d9a2ccfb31fbdd92161ff143/transformed/databinding-adapters-7.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.databinding:databinding-adapters:7.2.1] /home/ratko/.gradle/caches/transforms-3/3883c9b1d9a2ccfb31fbdd92161ff143/transformed/databinding-adapters-7.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.databinding:databinding-ktx:7.2.1] /home/ratko/.gradle/caches/transforms-3/ffe1b45e48156688a84ae35da271c9cf/transformed/databinding-ktx-7.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.databinding:databinding-ktx:7.2.1] /home/ratko/.gradle/caches/transforms-3/ffe1b45e48156688a84ae35da271c9cf/transformed/databinding-ktx-7.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.databinding:databinding-runtime:7.2.1] /home/ratko/.gradle/caches/transforms-3/5082be3fcb4d3a71c6bba6b7cd85008d/transformed/databinding-runtime-7.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.databinding:databinding-runtime:7.2.1] /home/ratko/.gradle/caches/transforms-3/5082be3fcb4d3a71c6bba6b7cd85008d/transformed/databinding-runtime-7.2.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.databinding:viewbinding:7.2.1] /home/ratko/.gradle/caches/transforms-3/fb995b942b56858f90135c5b4992faaf/transformed/viewbinding-7.2.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.databinding:viewbinding:7.2.1] /home/ratko/.gradle/caches/transforms-3/fb995b942b56858f90135c5b4992faaf/transformed/viewbinding-7.2.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.1] /home/ratko/.gradle/caches/transforms-3/18b32690f7c33ab15127a459df86e77f/transformed/navigation-fragment-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
@@ -236,16 +226,12 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/ratko/.gradle/c
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/ratko/.gradle/caches/transforms-3/bbe2ef28165f1d8ec5540b4ad1b9dfc6/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/ratko/.gradle/caches/transforms-3/76a16560d8975ea3074e416e43115e40/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/ratko/.gradle/caches/transforms-3/76a16560d8975ea3074e416e43115e40/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /home/ratko/.gradle/caches/transforms-3/245c7ce68c6b2586b5e0792c6843bab5/transformed/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /home/ratko/.gradle/caches/transforms-3/245c7ce68c6b2586b5e0792c6843bab5/transformed/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /home/ratko/.gradle/caches/transforms-3/97767184a7962056eb9ec5cdbf3bb537/transformed/lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /home/ratko/.gradle/caches/transforms-3/97767184a7962056eb9ec5cdbf3bb537/transformed/lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /home/ratko/.gradle/caches/transforms-3/421875379423072fde53e6276813c60b/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /home/ratko/.gradle/caches/transforms-3/421875379423072fde53e6276813c60b/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /home/ratko/.gradle/caches/transforms-3/0fe94235d91417baa750edf08a6f2a54/transformed/lifecycle-service-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /home/ratko/.gradle/caches/transforms-3/0fe94235d91417baa750edf08a6f2a54/transformed/lifecycle-service-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/cb5baf6f6cd3c337c16cbd482c02d812/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/ratko/.gradle/caches/transforms-3/cb5baf6f6cd3c337c16cbd482c02d812/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] /home/ratko/.gradle/caches/transforms-3/59d61b3c9c11baefb1ddcb4d69830534/transformed/startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] /home/ratko/.gradle/caches/transforms-3/59d61b3c9c11baefb1ddcb4d69830534/transformed/startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/ratko/.gradle/caches/transforms-3/d4ea9862e322b1a874b7f9e594020021/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/ratko/.gradle/caches/transforms-3/d4ea9862e322b1a874b7f9e594020021/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/ratko/.gradle/caches/transforms-3/e7fdc0b9d7d5b512d4130098ebe75354/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/ratko/.gradle/caches/transforms-3/e7fdc0b9d7d5b512d4130098ebe75354/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/ratko/.gradle/caches/transforms-3/8ece1a5450dc30815e1e80c220480ad0/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
@@ -256,18 +242,6 @@ MERGED from [androidx.transition:transition:1.4.1] /home/ratko/.gradle/caches/tr
 MERGED from [androidx.transition:transition:1.4.1] /home/ratko/.gradle/caches/transforms-3/03e45a5631613f3e743754c77b739101/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.8.0] /home/ratko/.gradle/caches/transforms-3/065dfa018132f0a621878cd66243e674/transformed/core-1.8.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.8.0] /home/ratko/.gradle/caches/transforms-3/065dfa018132f0a621878cd66243e674/transformed/core-1.8.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /home/ratko/.gradle/caches/transforms-3/3e3a686cb0772c7f4033c461f452d013/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /home/ratko/.gradle/caches/transforms-3/3e3a686cb0772c7f4033c461f452d013/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/ratko/.gradle/caches/transforms-3/54cc6d9921cfe427d67a889cfb975249/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/ratko/.gradle/caches/transforms-3/54cc6d9921cfe427d67a889cfb975249/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /home/ratko/.gradle/caches/transforms-3/f4c51caf9fb605b48e612956bab12b07/transformed/savedstate-ktx-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /home/ratko/.gradle/caches/transforms-3/f4c51caf9fb605b48e612956bab12b07/transformed/savedstate-ktx-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.2.0] /home/ratko/.gradle/caches/transforms-3/ed907ea7ba53c58aeebc4079207b83f1/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.2.0] /home/ratko/.gradle/caches/transforms-3/ed907ea7ba53c58aeebc4079207b83f1/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.startup:startup-runtime:1.0.0] /home/ratko/.gradle/caches/transforms-3/59d61b3c9c11baefb1ddcb4d69830534/transformed/startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.0.0] /home/ratko/.gradle/caches/transforms-3/59d61b3c9c11baefb1ddcb4d69830534/transformed/startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] /home/ratko/.gradle/caches/transforms-3/d4ea9862e322b1a874b7f9e594020021/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /home/ratko/.gradle/caches/transforms-3/d4ea9862e322b1a874b7f9e594020021/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ratko/.gradle/caches/transforms-3/f72ec8c1212ab1337e686822dcea07a2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ratko/.gradle/caches/transforms-3/f72ec8c1212ab1337e686822dcea07a2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/ratko/.gradle/caches/transforms-3/672676c0506c6d442e9db27fee4e6188/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
@@ -278,6 +252,20 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/r
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/ratko/.gradle/caches/transforms-3/6aad9dcd3aa9bc4c076e45642ff37f7a/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /home/ratko/.gradle/caches/transforms-3/41441b4c2106b5260e1152573c42cf87/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /home/ratko/.gradle/caches/transforms-3/41441b4c2106b5260e1152573c42cf87/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /home/ratko/.gradle/caches/transforms-3/f4c51caf9fb605b48e612956bab12b07/transformed/savedstate-ktx-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /home/ratko/.gradle/caches/transforms-3/f4c51caf9fb605b48e612956bab12b07/transformed/savedstate-ktx-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /home/ratko/.gradle/caches/transforms-3/ed907ea7ba53c58aeebc4079207b83f1/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /home/ratko/.gradle/caches/transforms-3/ed907ea7ba53c58aeebc4079207b83f1/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /home/ratko/.gradle/caches/transforms-3/3e3a686cb0772c7f4033c461f452d013/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /home/ratko/.gradle/caches/transforms-3/3e3a686cb0772c7f4033c461f452d013/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/ratko/.gradle/caches/transforms-3/85d5ffd9d14939152ff32b22b30ff04a/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/ratko/.gradle/caches/transforms-3/85d5ffd9d14939152ff32b22b30ff04a/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /home/ratko/.gradle/caches/transforms-3/97767184a7962056eb9ec5cdbf3bb537/transformed/lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /home/ratko/.gradle/caches/transforms-3/97767184a7962056eb9ec5cdbf3bb537/transformed/lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /home/ratko/.gradle/caches/transforms-3/421875379423072fde53e6276813c60b/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /home/ratko/.gradle/caches/transforms-3/421875379423072fde53e6276813c60b/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/ratko/.gradle/caches/transforms-3/54cc6d9921cfe427d67a889cfb975249/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/ratko/.gradle/caches/transforms-3/54cc6d9921cfe427d67a889cfb975249/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/ratko/.gradle/caches/transforms-3/7ab702f009a5c29a1baf9a1fb5794136/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/ratko/.gradle/caches/transforms-3/7ab702f009a5c29a1baf9a1fb5794136/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 INJECTED from /home/ratko/Desktop/AndroidCourse/firstProject/app/src/main/AndroidManifest.xml

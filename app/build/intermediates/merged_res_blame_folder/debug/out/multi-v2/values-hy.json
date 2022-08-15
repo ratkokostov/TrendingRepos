@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.firstapp-mergeDebugResources-45:/values-hy/values-hy.xml",
+            "outputFile": "com.example.firstapp-mergeDebugResources-43:/values-hy/values-hy.xml",
             "map": [
                 {
                     "source": "/home/ratko/.gradle/caches/transforms-3/6ea5e02244b74fe2f2bc6384d218f2ff/transformed/material-1.6.1/res/values-hy/values-hy.xml",

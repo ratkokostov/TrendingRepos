@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.firstapp-mergeDebugResources-45:/values-az/values-az.xml",
+            "outputFile": "com.example.firstapp-mergeDebugResources-43:/values-az/values-az.xml",
             "map": [
                 {
                     "source": "/home/ratko/.gradle/caches/transforms-3/8e898484a1c13ffd3f7c43ca6077999f/transformed/appcompat-1.4.2/res/values-az/values-az.xml",

@@ -23,14 +23,14 @@ class RecyclerViewAdapter(private val clickHandler: PostClickHandler) :
         RecyclerView.ViewHolder(itemBinding.root),
         View.OnClickListener {
         fun bind(item: Item) {
-            itemBinding.itemTitle.text = item.fullName
-            itemBinding.itemDesc.text = item.description
-            val imageThumb = itemBinding.itemImage
-            val url = item.owner.avatarUrl
+            with (itemBinding) {
+                itemTitle.text = item.fullName
+                itemDesc.text = item.description
 
-            Picasso.get()
-                .load(url)
-                .into(imageThumb)
+                Picasso.get()
+                    .load(item.owner.avatarUrl)
+                    .into(itemImage)
+            }
         }
 
         init {
