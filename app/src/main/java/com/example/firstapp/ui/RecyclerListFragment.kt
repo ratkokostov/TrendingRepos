@@ -43,7 +43,8 @@ class RecyclerListFragment : Fragment(), PostClickHandler {
 
      private fun initViewModel(){
             val viewModel = ViewModelProvider(this).get(PostViewModel::class.java)
-            viewModel.getRecyclerListObserver().observe(viewLifecycleOwner,Observer<GithubTrending>{
+
+            viewModel.recyclerListLiveData.observe(viewLifecycleOwner,Observer<GithubTrending>{
                 if(it != null){
                     recyclerAdapter.setUpdatedData(it.items)
                 }
