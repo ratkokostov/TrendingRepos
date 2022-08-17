@@ -1,7 +1,10 @@
 package com.example.firstapp.di
 
+import com.example.firstapp.BuildConfig
 import com.example.firstapp.domain.MainRepository
-import com.example.firstapp.network.ApiService
+import com.example.firstapp.network.GithubBaseUrlProvider
+import com.example.firstapp.network.GithubBaseUrlProviderImpl
+import com.example.firstapp.network.SearchGithubServiceApi
 import com.example.firstapp.repository.MainRepositoryImpl
 import dagger.Binds
 import dagger.Module
@@ -18,12 +21,21 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideMyApi(): ApiService {
+    fun provideRetrofitBuilder(): Retrofit.Builder {
         return Retrofit.Builder()
-            .baseUrl("https://api.github.com/search/")
             .addConverterFactory(GsonConverterFactory.create())
+    }
+
+    @Provides
+    @Singleton
+    fun provideApiService(
+        retrofitBuilder: Retrofit.Builder,
+        githubBaseUrlProvider: GithubBaseUrlProvider
+    ): SearchGithubServiceApi {
+        return retrofitBuilder
+            .baseUrl(githubBaseUrlProvider.getUrl())
             .build()
-            .create(ApiService::class.java)
+            .create(SearchGithubServiceApi::class.java)
     }
 
     @Module
@@ -32,6 +44,10 @@ object AppModule {
         @Binds
         @Singleton
         fun bindMainRepository(mainRepository: MainRepositoryImpl): MainRepository
+
+        @Binds
+        @Singleton
+        fun bindGithubBaseUrlProvider(githubBaseUrlProvider : GithubBaseUrlProviderImpl) : GithubBaseUrlProvider
     }
 
 }
