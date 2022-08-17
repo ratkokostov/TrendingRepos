@@ -2,10 +2,10 @@ package com.example.firstapp.ui
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.firstapp.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -54,7 +54,7 @@ class RepoDetailFragment : Fragment() {
             RepoDetailFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_TITLE, param1)
-                    Log.d("Fragmentsss","onCreate: $param1")
+                    Log.d("Fragmentsss", "onCreate: $param1")
                     putString(ARG_PARAM2, param2)
                 }
             }

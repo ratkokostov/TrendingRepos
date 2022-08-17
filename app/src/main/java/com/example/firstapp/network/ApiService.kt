@@ -6,6 +6,6 @@ import retrofit2.http.Query
 
 interface ApiService {
     @GET("repositories")
-    suspend fun getDataFromApi(@Query("q") query : String): GithubTrending
+    suspend fun getDataFromApi(@Query("q") query: String): GithubTrending
 
-    }
+}
