@@ -23,7 +23,7 @@ class RecyclerViewAdapter(private val clickHandler: PostClickHandler) :
         RecyclerView.ViewHolder(itemBinding.root),
         View.OnClickListener {
         fun bind(item: Item) {
-            with (itemBinding) {
+            with(itemBinding) {
                 itemTitle.text = item.fullName
                 itemDesc.text = item.description
 

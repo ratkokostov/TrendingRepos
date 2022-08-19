@@ -2,11 +2,12 @@ package com.example.firstapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.example.firstapp.databinding.ActivityMainBinding
-import com.example.firstapp.ui.RecyclerListFragment
+import com.example.firstapp.domain.MainRepository
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,13 +17,5 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
     }
 
-    private fun setupFragment() {
-        val fragment = RecyclerListFragment.newInstance()
-        val fragmentManager: FragmentManager = supportFragmentManager
-        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(android.R.id.content, fragment)
-        fragmentTransaction.commit()
-
-    }
 }
 
