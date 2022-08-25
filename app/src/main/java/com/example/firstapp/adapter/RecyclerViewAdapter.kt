@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.firstapp.databinding.CardLayoutBinding
 import com.example.firstapp.model.Item
 import com.example.firstapp.ui.PostClickHandler
+import com.example.firstapp.ui.views.ImageTitleSubtitleViewState
 import com.squareup.picasso.Picasso
 
 class RecyclerViewAdapter(private val clickHandler: PostClickHandler) :
@@ -24,15 +25,9 @@ class RecyclerViewAdapter(private val clickHandler: PostClickHandler) :
         View.OnClickListener {
         fun bind(item: Item) {
             with(itemBinding) {
-                itemTitle.text = item.fullName
-                itemDesc.text = item.description
-
-                Picasso.get()
-                    .load(item.owner.avatarUrl)
-                    .into(itemImage)
+                imageComponent.render(ImageTitleSubtitleViewState(item.fullName,item.description,item.owner.avatarUrl))
             }
         }
-
         init {
             itemBinding.root.setOnClickListener(this)
         }
