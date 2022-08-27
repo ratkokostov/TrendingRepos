@@ -1,7 +1,7 @@
 package com.example.firstapp.domain
 
-import com.example.firstapp.model.GithubTrending
+import com.example.firstapp.util.Resource
 
 interface MainRepository {
-    suspend fun doNetworkCall(): GithubTrending
+    suspend fun doNetworkCall(): Resource
 }

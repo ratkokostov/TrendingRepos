@@ -8,7 +8,6 @@ import com.example.firstapp.databinding.CardLayoutBinding
 import com.example.firstapp.model.Item
 import com.example.firstapp.ui.PostClickHandler
 import com.example.firstapp.ui.views.ImageTitleSubtitleViewState
-import com.squareup.picasso.Picasso
 
 class RecyclerViewAdapter(private val clickHandler: PostClickHandler) :
     RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
@@ -25,9 +24,16 @@ class RecyclerViewAdapter(private val clickHandler: PostClickHandler) :
         View.OnClickListener {
         fun bind(item: Item) {
             with(itemBinding) {
-                imageComponent.render(ImageTitleSubtitleViewState(item.fullName,item.description,item.owner.avatarUrl))
+                imageComponent.render(
+                    ImageTitleSubtitleViewState(
+                        item.fullName,
+                        item.description,
+                        item.owner.avatarUrl
+                    )
+                )
             }
         }
+
         init {
             itemBinding.root.setOnClickListener(this)
         }

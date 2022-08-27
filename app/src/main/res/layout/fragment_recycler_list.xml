@@ -3,11 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.GithubTrendingFragment">
+    tools:context=".ui.GithubTrendingFragment"
+     >
 
-      <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <com.example.firstapp.ui.views.ImageTitleDescButtonView
+            android:id="@+id/noInternetConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        style="?android:attr/progressBarStyleLarge"
         android:layout_height="wrap_content"
-         />
+        android:id="@+id/progressBar"
+        android:layout_gravity="center"
+        android:max ="3"
+        android:progress="100"/>
+
 </FrameLayout>

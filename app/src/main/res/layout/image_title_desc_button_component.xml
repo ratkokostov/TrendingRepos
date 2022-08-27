@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+    >
+
+    <ImageView
+        android:id="@+id/noInternetImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="No Internet Connection Image"
+        android:src="@drawable/nointernetconection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/whoops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/noInternetImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Whoops"
+        tools:text="Whoops"
+        />
+    <TextView
+        android:id="@+id/description_error"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/whoops"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:lines="2"
+        android:maxLines="2"
+        tools:text="Slow or no internet connection. Please check your internet settings"
+        android:text="Slow or no internet connection. Please check your internet settings"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Pull Down to Refresh"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description_error" />
+
+</merge>

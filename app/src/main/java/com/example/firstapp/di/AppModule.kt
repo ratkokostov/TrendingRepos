@@ -1,6 +1,5 @@
 package com.example.firstapp.di
 
-import com.example.firstapp.BuildConfig
 import com.example.firstapp.domain.MainRepository
 import com.example.firstapp.network.GithubBaseUrlProvider
 import com.example.firstapp.network.GithubBaseUrlProviderImpl
@@ -47,7 +46,7 @@ object AppModule {
 
         @Binds
         @Singleton
-        fun bindGithubBaseUrlProvider(githubBaseUrlProvider : GithubBaseUrlProviderImpl) : GithubBaseUrlProvider
+        fun bindGithubBaseUrlProvider(githubBaseUrlProvider: GithubBaseUrlProviderImpl): GithubBaseUrlProvider
     }
 
 }

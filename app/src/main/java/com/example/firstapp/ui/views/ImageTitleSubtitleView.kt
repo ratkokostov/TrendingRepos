@@ -12,12 +12,14 @@ class ImageTitleSubtitleView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-):
+) :
     ConstraintLayout(context, attrs, defStyleAttr) {
-    private val  binding : ImageTitleSubtitleViewBinding
+    private val binding: ImageTitleSubtitleViewBinding
+
     init {
         binding = ImageTitleSubtitleViewBinding.inflate(LayoutInflater.from(context), this)
     }
+
     fun render(state: ImageTitleSubtitleViewState) {
         with(binding) {
             itemTitle.text = state.title
@@ -32,7 +34,7 @@ class ImageTitleSubtitleView @JvmOverloads constructor(
 }
 
 class ImageTitleSubtitleViewState(
-     val title: String?,
-     val subtitle: String?,
-     val imageUrl: String?
+    val title: String?,
+    val subtitle: String?,
+    val imageUrl: String?
 )
