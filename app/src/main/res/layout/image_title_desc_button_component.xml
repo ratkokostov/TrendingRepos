@@ -40,7 +40,6 @@
         android:lines="2"
         android:maxLines="2"
         tools:text="@string/no_internet_connection_description"
-
         />
 
     <Button
