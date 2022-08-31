@@ -41,5 +41,9 @@ class ImageTitleDescriptionButtonViewState(
     val title: CharSequence,
     val description: CharSequence,
     val buttonText: String?,
+<<<<<<< HEAD
 )
 
+=======
+)
+>>>>>>> 92345b2 ( Add button listener & drawable images)

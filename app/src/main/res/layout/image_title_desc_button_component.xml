@@ -11,8 +11,13 @@
         android:id="@+id/noInternetImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
+<<<<<<< HEAD
         android:contentDescription="@string/no_internet_connection_image"
         tools:src="@drawable/nointernetconnection"
+=======
+        android:contentDescription="No Internet Connection Image"
+        android:src="@drawable/nointernetconnection"
+>>>>>>> 92345b2 ( Add button listener & drawable images)
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
