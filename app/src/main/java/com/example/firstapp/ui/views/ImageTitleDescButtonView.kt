@@ -5,6 +5,8 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.firstapp.databinding.ImageTitleDescButtonComponentBinding
+import com.example.firstapp.ui.extensions.ImageTitleDescButtonListener
+import com.example.firstapp.ui.extensions.setTextOrHide
 import com.squareup.picasso.Picasso
 
 class ImageTitleDescButtonView @JvmOverloads constructor(
@@ -14,17 +16,29 @@ class ImageTitleDescButtonView @JvmOverloads constructor(
 ) :
     ConstraintLayout(context, attrs, defStyleAttr) {
     private val binding: ImageTitleDescButtonComponentBinding
-
+    var listener: ImageTitleDescButtonListener? = null
     init {
-        binding = ImageTitleDescButtonComponentBinding.inflate(LayoutInflater.from(context), this)
+        binding = ImageTitleDescButtonComponentBinding.inflate(LayoutInflater.from(context), this).apply {
+            button.setOnClickListener { listener?.onButtonClick() }
+        }
     }
 
-    fun render(imageId: Int) {
+    fun render(state: ImageTitleDescriptionButtonViewState){
         with(binding) {
+            title.setTextOrHide(state.title)
+            description.setTextOrHide(state.description)
+            button.setTextOrHide(state.buttonText)
             Picasso.get()
-                .load(imageId)
+                .load(state.imageId)
                 .into(binding.noInternetImage)
         }
     }
 
 }
+
+class ImageTitleDescriptionButtonViewState(
+    val imageId: Int,
+    val title: CharSequence,
+    val description: CharSequence,
+    val buttonText: String?,
+)

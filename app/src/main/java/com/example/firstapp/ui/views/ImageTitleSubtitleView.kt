@@ -3,8 +3,11 @@ package com.example.firstapp.ui.views
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.isVisible
 import com.example.firstapp.databinding.ImageTitleSubtitleViewBinding
+import com.example.firstapp.ui.extensions.setTextOrHide
 import com.squareup.picasso.Picasso
 
 
@@ -22,9 +25,8 @@ class ImageTitleSubtitleView @JvmOverloads constructor(
 
     fun render(state: ImageTitleSubtitleViewState) {
         with(binding) {
-            itemTitle.text = state.title
-            itemDesc.text = state.subtitle
-
+            itemTitle.setTextOrHide(state.title)
+            itemDesc.setTextOrHide(state.subtitle)
             Picasso.get()
                 .load(state.imageUrl)
                 .into(itemImage)

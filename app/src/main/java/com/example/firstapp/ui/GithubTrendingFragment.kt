@@ -15,6 +15,7 @@ import com.example.firstapp.R
 import com.example.firstapp.adapter.RecyclerViewAdapter
 import com.example.firstapp.databinding.FragmentRecyclerListBinding
 import com.example.firstapp.model.Item
+import com.example.firstapp.ui.extensions.ImageTitleDescButtonListener
 import com.example.firstapp.util.Resource
 import com.example.firstapp.viewModel.GithubTrendingViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -52,9 +53,22 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
             layoutManager = LinearLayoutManager(activity)
             adapter = recyclerAdapter
         }
+        binding.swipeToRefresh.setOnRefreshListener {
+            viewModel.makeApiCall()
+        }
+        binding.noInternetConnection.listener = object : ImageTitleDescButtonListener {
+            override fun onButtonClick() {
+                viewModel.makeApiCall()
+            }
+        }
     }
 
     private fun initViewModel() {
+        observeRecyclerLiveData()
+        viewModel.makeApiCall()
+
+    }
+    private fun observeRecyclerLiveData(){
         viewModel.recyclerListLiveData.observe(viewLifecycleOwner, Observer { response ->
             binding.recyclerView.isVisible = response is Resource.Success
             if (response is Resource.Success) {
@@ -77,12 +91,7 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
                 }
             }
         })
-        viewModel.makeApiCall()
-        binding.swipeToRefresh.setOnRefreshListener {
-            viewModel.makeApiCall()
-        }
     }
-
     override fun clickedPostItem(item: Item) {
         val bundle = bundleOf("title" to item.fullName)
         findNavController().navigate(R.id.repoDetailFragment, bundle)
