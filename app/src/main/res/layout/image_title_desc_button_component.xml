@@ -11,8 +11,8 @@
         android:id="@+id/noInternetImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:contentDescription="No Internet Connection Image"
-        android:src="@drawable/nointernetconnection"
+        android:contentDescription="@string/no_internet_connection_image"
+        tools:src="@drawable/nointernetconnection"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:text="Whoops"
-        tools:text="Whoops"
+        tools:text="@string/whoops"
         />
     <TextView
         android:id="@+id/description"
@@ -40,8 +39,7 @@
         android:textAlignment="center"
         android:lines="2"
         android:maxLines="2"
-        tools:text="Slow or no internet connection. Please check your internet settings"
-        android:text="Slow or no internet connection. Please check your internet settings"
+        tools:text="@string/no_internet_connection_description"
 
         />
 
@@ -52,7 +50,7 @@
         android:background="@color/teal_200"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:text="Pull Down to Refresh"
+        tools:text="@string/pull_down_to_refresh_btn"
         android:layout_marginTop="20dp"
         android:textAllCaps="false"
         android:textColor="@color/white"

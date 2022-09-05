@@ -16,6 +16,7 @@ import com.example.firstapp.adapter.RecyclerViewAdapter
 import com.example.firstapp.databinding.FragmentRecyclerListBinding
 import com.example.firstapp.model.Item
 import com.example.firstapp.ui.extensions.ImageTitleDescButtonListener
+import com.example.firstapp.ui.views.ImageTitleDescriptionButtonViewState
 import com.example.firstapp.util.Resource
 import com.example.firstapp.viewModel.GithubTrendingViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -84,7 +85,12 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
 
                 }
                 is Resource.Error -> {
-
+                    with(binding){
+                        noInternetConnection.render(ImageTitleDescriptionButtonViewState(
+                        R.drawable.nointernetconnection,
+                        getString(R.string.whoops),
+                        getString(R.string.no_internet_connection_description),getString(R.string.pull_down_to_refresh_btn)))
+                    }
                 }
                 is Resource.Loading -> {
 
