@@ -16,10 +16,7 @@ import com.example.firstapp.adapter.RecyclerViewAdapter
 import com.example.firstapp.databinding.FragmentRecyclerListBinding
 import com.example.firstapp.model.Item
 import com.example.firstapp.ui.extensions.ImageTitleDescButtonListener
-<<<<<<< HEAD
 import com.example.firstapp.ui.views.ImageTitleDescriptionButtonViewState
-=======
->>>>>>> 92345b2 ( Add button listener & drawable images)
 import com.example.firstapp.util.Resource
 import com.example.firstapp.viewModel.GithubTrendingViewModel
 import dagger.hilt.android.AndroidEntryPoint
