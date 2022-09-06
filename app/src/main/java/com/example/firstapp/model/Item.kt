@@ -22,6 +22,7 @@ data class Item(
     val name: String?,
     @ColumnInfo(name = "owner")
     val owner: Owner?,
-
+    @ColumnInfo(name = "watchers_count")
+    val watchers_count: Int
 )
 

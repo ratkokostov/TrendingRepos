@@ -44,7 +44,7 @@ class MainRepositoryImpl @Inject constructor(
                     response.body()?.items?.forEach {
                         insertRepo(it)
                     }
-                    Resource.Success(data = response.body()!!)
+                    Resource.Success(data = GithubTrending(response.body()!!.items.sortedBy{ it.id}))
 
                 }
                 else{
