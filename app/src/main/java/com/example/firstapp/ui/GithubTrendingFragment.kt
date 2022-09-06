@@ -89,7 +89,8 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
                         noInternetConnection.render(ImageTitleDescriptionButtonViewState(
                         R.drawable.nointernetconnection,
                         getString(R.string.whoops),
-                        getString(R.string.no_internet_connection_description),getString(R.string.pull_down_to_refresh_btn)))
+                        getString(R.string.no_internet_connection_description),
+                            getString(R.string.pull_down_to_refresh_btn)))
                     }
                 }
                 is Resource.Loading -> {
