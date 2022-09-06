@@ -99,7 +99,7 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
         })
     }
     override fun clickedPostItem(item: Item) {
-        val bundle = bundleOf("title" to item.fullName)
+        val bundle = bundleOf("title" to item.full_name)
         findNavController().navigate(R.id.repoDetailFragment, bundle)
     }
 

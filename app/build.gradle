@@ -65,11 +65,15 @@ dependencies {
 
     //SwipeRefreshLayout
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> bb3ce74 ( Render with function)
+//Coroutines
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.3"
+//Lifecycle Components
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.5.1"
+//Room
+    implementation "androidx.room:room-runtime:2.4.3"
+    kapt "androidx.room:room-compiler:2.4.3"
+    implementation "androidx.room:room-ktx:2.4.3"
 }
