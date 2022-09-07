@@ -26,9 +26,9 @@ class RecyclerViewAdapter(private val clickHandler: PostClickHandler) :
             with(itemBinding) {
                 imageComponent.render(
                     ImageTitleSubtitleViewState(
-                        item.fullName,
+                        item.full_name,
                         item.description,
-                        item.owner.avatarUrl
+                        item.owner?.avatarUrl
                     )
                 )
             }

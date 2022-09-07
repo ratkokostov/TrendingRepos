@@ -1,25 +1,28 @@
 package com.example.firstapp.model
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import java.util.*
+
 
 data class GithubTrending(
-    @SerializedName("incomplete_results")
-    val incompleteResults: Boolean,
-    @SerializedName("total_count")
-    val totalCount: Int,
     @SerializedName("items")
     val items: List<Item>
 
 )
-
+@Entity(tableName = "github_trending_repos")
 data class Item(
-    @SerializedName("description")
-    val description: String,
-    @SerializedName("full_name")
-    val fullName: String,
-    @SerializedName("name")
-    val name: String,
-    @SerializedName("owner")
-    val owner: Owner,
-
+    @PrimaryKey(autoGenerate = true)@ColumnInfo(name = "id")val id: Int = 0,
+    @ColumnInfo(name = "description")
+    val description: String?,
+    @ColumnInfo(name = "full_name")
+    val full_name: String?,
+    @ColumnInfo(name = "name")
+    val name: String?,
+    @ColumnInfo(name = "owner")
+    val owner: Owner?,
+    @ColumnInfo(name = "watchers_count")
+    val watchers_count: Int
 )
 
