@@ -16,7 +16,7 @@ interface GithubTrendingReposDAO {
     suspend fun updateRepo(githubTrending: Item)
 
     @Query("SELECT * FROM github_trending_repos")
-    fun getAllRepos(): List<Item>?
+    fun getAllRepos(): List<Item>
 
     @Delete
     suspend fun deleteRepo(githubTrending: Item)

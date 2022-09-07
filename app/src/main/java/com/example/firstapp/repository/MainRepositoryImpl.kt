@@ -18,21 +18,6 @@ class MainRepositoryImpl @Inject constructor(
     private val appDao: GithubTrendingReposDAO
 ) : MainRepository {
 
-    override fun getAllRepos(): List<Item>? {
-        return appDao.getAllRepos()
-    }
-
-    override suspend fun insertRepo(repo: Item){
-        appDao.insertRepo(repo)
-    }
-    override suspend fun deleteRepo(repo: Item){
-        appDao.deleteRepo(repo)
-    }
-    override suspend fun updateRepo(repo: Item){
-        appDao.updateRepo(repo)
-    }
-
-
     override suspend fun doNetworkCall(): Resource {
         return withContext(Dispatchers.IO){
             try{
@@ -42,20 +27,18 @@ class MainRepositoryImpl @Inject constructor(
                 if(response.isSuccessful){
                     appDao.deleteAllRepos()
                     response.body()?.items?.forEach {
-                        insertRepo(it)
+                        appDao.insertRepo(it)
                     }
                     Resource.Success(data = GithubTrending(response.body()!!.items.sortedBy{ it.id}))
 
                 }
                 else{
-                        Resource.Error()
+                    Resource.Error()
                 }
             } catch (e: IOException){
-                if(appDao.getAllRepos() != null){
-                    Resource.Success(data = GithubTrending(appDao.getAllRepos()!!))
-                }
-                else {
-
+                if(appDao.getAllRepos().isNotEmpty()){
+                    Resource.Success(data = GithubTrending(appDao.getAllRepos()))
+                } else {
                     Resource.Error()
                 }
             }
