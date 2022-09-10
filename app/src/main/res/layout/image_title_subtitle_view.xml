@@ -5,13 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
         <ImageView
             android:id="@+id/item_image"
             android:layout_width="90dp"
             android:layout_height="90dp"
+            tools:src="@drawable/nointernetconnection"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             android:contentDescription="@string/profile_picture"/>
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <TextView
             android:id="@+id/item_title"
             android:layout_width="wrap_content"
@@ -19,6 +29,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/item_image"
             android:layout_marginStart="16dp"
+            tools:text="@string/app_name"
             android:textSize="23sp"/>
 
         <TextView
@@ -27,7 +38,11 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_marginStart="17dp"
+            android:maxLines="2"
+            tools:text="@string/no_internet_connection_description"
             app:layout_constraintStart_toEndOf="@+id/item_image"
             app:layout_constraintTop_toBottomOf="@+id/item_title" />
+            </LinearLayout>
+        </LinearLayout>
 
 </merge>

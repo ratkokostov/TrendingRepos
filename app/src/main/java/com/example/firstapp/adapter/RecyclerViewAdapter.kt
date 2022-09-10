@@ -1,5 +1,6 @@
 package com.example.firstapp.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,8 +15,10 @@ class RecyclerViewAdapter(private val clickHandler: PostClickHandler) :
 
     private val items: MutableList<Item> = mutableListOf()
     fun setUpdatedData(items: List<Item>) {
-        this.items.addAll(items)
-        notifyDataSetChanged()
+        if(this.items.isEmpty()) {
+            this.items.addAll(items)
+            notifyDataSetChanged()
+        }
 
     }
 

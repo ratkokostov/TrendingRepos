@@ -1,5 +1,5 @@
 package com.example.firstapp.network
 
 interface GithubBaseUrlProvider {
-    fun getUrl(): String
+    fun getUrl(baseUrl: String): String
 }

@@ -8,8 +8,10 @@ import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
 
 data class Owner(
+    @SerializedName("login")
+    val login: String?,
     @SerializedName("avatar_url")
-    val avatarUrl: String?,
+    val avatarUrl: String?
 )
 
 class TypeConverterOwner {

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:elevation="12dp"
+            android:id="@+id/view2"
+            app:cardCornerRadius="75dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9">
+    <ImageView
+        android:id="@+id/repo_picture"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:contentDescription="@string/no_internet_connection_image"
+        tools:src="@drawable/nointernetconnection" />
+        </androidx.cardview.widget.CardView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        tools:text="@string/whoops" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="280dp"
+        android:textAlignment="center"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp"
+        android:maxLines="3"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:textSize="14sp"
+        tools:text="@string/no_internet_connection_description" />
+    </LinearLayout>
+</LinearLayout>
+
+</merge>

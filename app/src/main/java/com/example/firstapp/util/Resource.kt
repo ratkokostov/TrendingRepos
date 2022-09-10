@@ -1,11 +1,10 @@
 package com.example.firstapp.util
 
-import com.example.firstapp.model.GithubTrending
 
-sealed class Resource(
-    val data: GithubTrending? = null,
+sealed class Resource<T>(
+    val data: T? = null,
 ) {
-    class Success(data: GithubTrending) : Resource(data)
-    class Error() : Resource()
-    class Loading : Resource()
+    class Success<T>(data: T) : Resource<T>(data)
+    class Error<T> : Resource<T>()
+    class Loading<T> : Resource<T>()
 }
