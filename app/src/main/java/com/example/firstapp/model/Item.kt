@@ -1,8 +1,11 @@
 package com.example.firstapp.model
+import android.os.Parcel
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 import java.util.*
 
 
@@ -11,6 +14,7 @@ data class GithubTrending(
     val items: List<Item>
 
 )
+@Parcelize
 @Entity(tableName = "github_trending_repos")
 data class Item(
     @PrimaryKey(autoGenerate = true)@ColumnInfo(name = "id")val id: Int = 0,
@@ -22,7 +26,7 @@ data class Item(
     val name: String?,
     @ColumnInfo(name = "owner")
     val owner: Owner?,
-    @ColumnInfo(name = "watchers_count")
-    val watchers_count: Int
-)
+    @ColumnInfo(name = "default_branch")
+    val default_branch: String?
+) : Parcelable
 

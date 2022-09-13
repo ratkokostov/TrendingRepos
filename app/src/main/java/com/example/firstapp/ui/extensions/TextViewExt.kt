@@ -7,3 +7,5 @@ fun TextView.setTextOrHide(title: CharSequence?){
     isVisible = !title.isNullOrEmpty()
     text = title
 }
+
+fun String.firstLetterUppercase() = this.replaceFirstChar { it.uppercase() }

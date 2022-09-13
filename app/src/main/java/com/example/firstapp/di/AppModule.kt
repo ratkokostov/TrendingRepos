@@ -5,9 +5,8 @@ import androidx.room.Room
 import com.example.firstapp.dataLayer.GithubTrendingReposDAO
 import com.example.firstapp.dataLayer.RoomDataBase
 import com.example.firstapp.repository.MainRepository
-import com.example.firstapp.network.GithubBaseUrlProvider
-import com.example.firstapp.network.GithubBaseUrlProviderImpl
 import com.example.firstapp.network.SearchGithubServiceApi
+import com.example.firstapp.network.SearchReadMeServiceApi
 import com.example.firstapp.repository.MainRepositoryImpl
 import dagger.Binds
 import dagger.Module
@@ -17,7 +16,11 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.scalars.ScalarsConverterFactory
 import javax.inject.Singleton
+
+const val BASE_URL_REPOS = "https://api.github.com"
+const val BASE_URL_README = "https://raw.githubusercontent.com"
 
 @Module(includes = [AppModule.Binding::class])
 @InstallIn(SingletonComponent::class)
@@ -37,22 +40,24 @@ object AppModule {
         "repos_db"
     ).fallbackToDestructiveMigration()
         .build()
-
     @Provides
     @Singleton
-    fun provideRetrofitBuilder(): Retrofit.Builder {
+    fun provideApiServiceForReadme(
+    ): SearchReadMeServiceApi {
         return Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(BASE_URL_README)
+            .addConverterFactory(ScalarsConverterFactory.create())
+            .build()
+            .create(SearchReadMeServiceApi::class.java)
     }
 
     @Provides
     @Singleton
-    fun provideApiService(
-        retrofitBuilder: Retrofit.Builder,
-        githubBaseUrlProvider: GithubBaseUrlProvider
+    fun provideApiServiceForRepos(
     ): SearchGithubServiceApi {
-        return retrofitBuilder
-            .baseUrl(githubBaseUrlProvider.getUrl())
+        return Retrofit.Builder()
+            .baseUrl("https://api.github.com")
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(SearchGithubServiceApi::class.java)
     }
@@ -63,10 +68,6 @@ object AppModule {
         @Binds
         @Singleton
         fun bindMainRepository(mainRepository: MainRepositoryImpl): MainRepository
-
-        @Binds
-        @Singleton
-        fun bindGithubBaseUrlProvider(githubBaseUrlProvider: GithubBaseUrlProviderImpl): GithubBaseUrlProvider
     }
 
 }

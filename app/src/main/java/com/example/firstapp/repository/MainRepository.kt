@@ -1,9 +1,10 @@
 package com.example.firstapp.repository
 
-import androidx.lifecycle.LiveData
-import com.example.firstapp.model.Item
+import com.example.firstapp.model.GithubTrending
 import com.example.firstapp.util.Resource
 
 interface MainRepository {
-    suspend fun doNetworkCall(): Resource
+    suspend fun doNetworkCallForRepos(): Resource<out GithubTrending?>
+    suspend fun doNetworkCallForReadme(full_name: String?,default_branch: String?): Resource<out String?>
+
 }

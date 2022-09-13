@@ -1,5 +1,6 @@
-package com.example.firstapp.ui
+package com.example.firstapp.ui.fragments.repolistfragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,11 +15,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.firstapp.R
 import com.example.firstapp.adapter.RecyclerViewAdapter
 import com.example.firstapp.databinding.FragmentRecyclerListBinding
+import com.example.firstapp.model.GithubTrending
 import com.example.firstapp.model.Item
+import com.example.firstapp.ui.PostClickHandler
 import com.example.firstapp.ui.extensions.ImageTitleDescButtonListener
 import com.example.firstapp.ui.views.ImageTitleDescriptionButtonViewState
 import com.example.firstapp.util.Resource
-import com.example.firstapp.viewModel.GithubTrendingViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -26,7 +28,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class GithubTrendingFragment : Fragment(), PostClickHandler {
 
     private val recyclerAdapter: RecyclerViewAdapter by lazy { RecyclerViewAdapter(this) }
-
 
     private var _binding: FragmentRecyclerListBinding? = null
     private val binding: FragmentRecyclerListBinding
@@ -55,21 +56,21 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
             adapter = recyclerAdapter
         }
         binding.swipeToRefresh.setOnRefreshListener {
-            viewModel.makeApiCall()
+            viewModel.makeApiCallForRepos()
         }
         binding.noInternetConnection.listener = object : ImageTitleDescButtonListener {
             override fun onButtonClick() {
-                viewModel.makeApiCall()
+                viewModel.makeApiCallForRepos()
             }
         }
     }
 
     private fun initViewModel() {
         observeRecyclerLiveData()
-        viewModel.makeApiCall()
-
+        viewModel.makeApiCallForRepos()
     }
-    private fun observeRecyclerLiveData(){
+
+    private fun observeRecyclerLiveData() {
         viewModel.recyclerListLiveData.observe(viewLifecycleOwner, Observer { response ->
             binding.recyclerView.isVisible = response is Resource.Success
             if (response is Resource.Success) {
@@ -85,12 +86,15 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
 
                 }
                 is Resource.Error -> {
-                    with(binding){
-                        noInternetConnection.render(ImageTitleDescriptionButtonViewState(
-                        R.drawable.nointernetconnection,
-                        getString(R.string.whoops),
-                        getString(R.string.no_internet_connection_description),
-                            getString(R.string.pull_down_to_refresh_btn)))
+                    with(binding) {
+                        noInternetConnection.render(
+                            ImageTitleDescriptionButtonViewState(
+                                R.drawable.nointernetconnection,
+                                getString(R.string.whoops),
+                                getString(R.string.no_internet_connection_description),
+                                getString(R.string.pull_down_to_refresh_btn)
+                            )
+                        )
                     }
                 }
                 is Resource.Loading -> {
@@ -99,8 +103,12 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
             }
         })
     }
+
     override fun clickedPostItem(item: Item) {
-        val bundle = bundleOf("title" to item.full_name)
+        val bundle = bundleOf(
+            "item" to item
+        )
+
         findNavController().navigate(R.id.repoDetailFragment, bundle)
     }
 
