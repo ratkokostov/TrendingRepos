@@ -5,8 +5,6 @@ import androidx.room.Room
 import com.example.firstapp.dataLayer.GithubTrendingReposDAO
 import com.example.firstapp.dataLayer.RoomDataBase
 import com.example.firstapp.repository.MainRepository
-import com.example.firstapp.network.GithubBaseUrlProvider
-import com.example.firstapp.network.GithubBaseUrlProviderImpl
 import com.example.firstapp.network.SearchGithubServiceApi
 import com.example.firstapp.network.SearchReadMeServiceApi
 import com.example.firstapp.repository.MainRepositoryImpl
@@ -45,10 +43,9 @@ object AppModule {
     @Provides
     @Singleton
     fun provideApiServiceForReadme(
-        githubBaseUrlProvider: GithubBaseUrlProvider
     ): SearchReadMeServiceApi {
         return Retrofit.Builder()
-            .baseUrl(githubBaseUrlProvider.getUrl(BASE_URL_README))
+            .baseUrl(BASE_URL_README)
             .addConverterFactory(ScalarsConverterFactory.create())
             .build()
             .create(SearchReadMeServiceApi::class.java)
@@ -57,10 +54,9 @@ object AppModule {
     @Provides
     @Singleton
     fun provideApiServiceForRepos(
-        githubBaseUrlProvider: GithubBaseUrlProvider
     ): SearchGithubServiceApi {
         return Retrofit.Builder()
-            .baseUrl(githubBaseUrlProvider.getUrl(BASE_URL_REPOS))
+            .baseUrl("https://api.github.com")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(SearchGithubServiceApi::class.java)
@@ -72,10 +68,6 @@ object AppModule {
         @Binds
         @Singleton
         fun bindMainRepository(mainRepository: MainRepositoryImpl): MainRepository
-
-        @Binds
-        @Singleton
-        fun bindGithubBaseUrlProvider(githubBaseUrlProvider: GithubBaseUrlProviderImpl): GithubBaseUrlProvider
     }
 
 }

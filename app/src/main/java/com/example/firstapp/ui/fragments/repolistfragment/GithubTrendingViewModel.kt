@@ -16,13 +16,12 @@ import javax.inject.Inject
 class GithubTrendingViewModel @Inject constructor(
     private val repository: MainRepository
 ) : ViewModel() {
-    private val _recyclerListLiveData: MutableLiveData<Resource<GithubTrending?>> by lazy { MutableLiveData() }
-    val recyclerListLiveData: LiveData<Resource<GithubTrending?>>
+    private val _recyclerListLiveData: MutableLiveData<Resource<out GithubTrending?>> by lazy { MutableLiveData() }
+    val recyclerListLiveData: LiveData<Resource<out GithubTrending?>>
         get() = _recyclerListLiveData
 
     fun makeApiCallForRepos() {
         viewModelScope.launch(Dispatchers.IO) {
-            _recyclerListLiveData.postValue(Resource.Loading())
             _recyclerListLiveData.postValue(repository.doNetworkCallForRepos())
         }
     }

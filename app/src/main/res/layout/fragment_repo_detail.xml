@@ -11,7 +11,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="@dimen/app_bar_layout_height"
         android:fitsSystemWindows="true"
         android:background="@drawable/repodetail_gradient_bg"
         >
@@ -27,8 +27,9 @@
         app:collapsedTitleTextAppearance="@style/CollapsedAppBar"
         >
         <ImageView
-            android:layout_width="180dp"
-            android:layout_height="170dp"
+            android:layout_marginTop="7dp"
+            android:layout_width="@dimen/square_image_size"
+            android:layout_height="@dimen/square_image_size"
             android:src="@drawable/repodetailimagebg"
             android:layout_gravity="center|end"
             android:contentDescription="@string/android_background"

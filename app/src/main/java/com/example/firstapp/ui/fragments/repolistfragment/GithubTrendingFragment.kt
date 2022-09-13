@@ -1,5 +1,6 @@
 package com.example.firstapp.ui.fragments.repolistfragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.firstapp.R
 import com.example.firstapp.adapter.RecyclerViewAdapter
 import com.example.firstapp.databinding.FragmentRecyclerListBinding
+import com.example.firstapp.model.GithubTrending
 import com.example.firstapp.model.Item
 import com.example.firstapp.ui.PostClickHandler
 import com.example.firstapp.ui.extensions.ImageTitleDescButtonListener
@@ -104,12 +106,9 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
 
     override fun clickedPostItem(item: Item) {
         val bundle = bundleOf(
-            "full_name" to item.full_name,
-            "description" to item.description,
-            "avatar_url" to item.owner?.avatarUrl,
-            "default_branch" to item.default_branch,
-            "login" to item.owner?.login
+            "item" to item
         )
+
         findNavController().navigate(R.id.repoDetailFragment, bundle)
     }
 

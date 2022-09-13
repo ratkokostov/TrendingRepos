@@ -1,5 +1,7 @@
 package com.example.firstapp.model
 
+import android.os.Parcel
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.TypeConverter
 import com.google.gson.Gson
@@ -12,7 +14,33 @@ data class Owner(
     val login: String?,
     @SerializedName("avatar_url")
     val avatarUrl: String?
-)
+) : Parcelable {
+    constructor(parcel: Parcel) : this(
+        parcel.readString(),
+        parcel.readString()
+    ) {
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(login)
+        parcel.writeString(avatarUrl)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<Owner> {
+        override fun createFromParcel(parcel: Parcel): Owner {
+            return Owner(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Owner?> {
+            return arrayOfNulls(size)
+        }
+    }
+
+}
 
 class TypeConverterOwner {
 

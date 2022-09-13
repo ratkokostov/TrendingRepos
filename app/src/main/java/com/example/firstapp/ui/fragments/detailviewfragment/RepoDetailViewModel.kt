@@ -16,13 +16,12 @@ class RepoDetailViewModel @Inject constructor(
     private val repository: MainRepository
 ) : ViewModel() {
 
-    private val _readmeData: MutableLiveData<Resource<String?>> by lazy { MutableLiveData() }
-    val readmeData: LiveData<Resource<String?>>
+    private val _readmeData: MutableLiveData<Resource<out String?>> by lazy { MutableLiveData() }
+    val readmeData: LiveData<Resource<out String?>>
         get() = _readmeData
 
     fun makeApiCallForReadme(full_name: String?, default_branch: String?) {
         viewModelScope.launch(Dispatchers.IO) {
-            _readmeData.postValue(Resource.Loading())
             _readmeData.postValue(repository.doNetworkCallForReadme(full_name, default_branch))
         }
     }

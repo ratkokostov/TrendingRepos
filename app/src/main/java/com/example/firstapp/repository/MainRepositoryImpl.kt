@@ -1,9 +1,7 @@
 package com.example.firstapp.repository
 
-import android.util.Log
 import com.example.firstapp.dataLayer.GithubTrendingReposDAO
 import com.example.firstapp.model.GithubTrending
-import com.example.firstapp.model.Item
 import com.example.firstapp.network.SearchGithubServiceApi
 import com.example.firstapp.network.SearchReadMeServiceApi
 import com.example.firstapp.util.Resource
@@ -15,10 +13,10 @@ import javax.inject.Inject
 
 class MainRepositoryImpl @Inject constructor(
     private val api: SearchGithubServiceApi,
-    private val api2: SearchReadMeServiceApi,
+    private val searchReadMeServiceApi: SearchReadMeServiceApi,
     private val appDao: GithubTrendingReposDAO,
 ) : MainRepository {
-    override suspend fun doNetworkCallForRepos(): Resource<GithubTrending?> {
+    override suspend fun doNetworkCallForRepos(): Resource<out GithubTrending?> {
         return withContext(Dispatchers.IO){
             try{
                 val response: Response<GithubTrending> = api.getDataForRepos("android")
@@ -45,14 +43,13 @@ class MainRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun doNetworkCallForReadme(full_name: String?, default_branch: String?): Resource<String?> {
+    override suspend fun doNetworkCallForReadme(full_name: String?, default_branch: String?): Resource<out String?> {
         return withContext(Dispatchers.IO){
             try{
-                val response: Response<String?> = api2.getDataForReadme("$full_name/$default_branch")
+                val response: Response<String?> = searchReadMeServiceApi.getDataForReadme("$full_name/$default_branch")
                 if(response.isSuccessful){
                     Resource.Success(data = response.body())
-                }
-                else{
+                }else{
                     Resource.Error()
                 }
             } catch (e: IOException){
