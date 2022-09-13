@@ -7,40 +7,16 @@ import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
 import com.google.gson.reflect.TypeToken
+import kotlinx.android.parcel.Parcelize
 import java.lang.reflect.Type
 
+@Parcelize
 data class Owner(
     @SerializedName("login")
     val login: String?,
     @SerializedName("avatar_url")
     val avatarUrl: String?
-) : Parcelable {
-    constructor(parcel: Parcel) : this(
-        parcel.readString(),
-        parcel.readString()
-    ) {
-    }
-
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(login)
-        parcel.writeString(avatarUrl)
-    }
-
-    override fun describeContents(): Int {
-        return 0
-    }
-
-    companion object CREATOR : Parcelable.Creator<Owner> {
-        override fun createFromParcel(parcel: Parcel): Owner {
-            return Owner(parcel)
-        }
-
-        override fun newArray(size: Int): Array<Owner?> {
-            return arrayOfNulls(size)
-        }
-    }
-
-}
+) : Parcelable
 
 class TypeConverterOwner {
 

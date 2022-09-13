@@ -12,14 +12,14 @@ import java.io.IOException
 import javax.inject.Inject
 
 class MainRepositoryImpl @Inject constructor(
-    private val api: SearchGithubServiceApi,
+    private val searchGithubServiceApi: SearchGithubServiceApi,
     private val searchReadMeServiceApi: SearchReadMeServiceApi,
-    private val appDao: GithubTrendingReposDAO,
+    private val appDao: GithubTrendingReposDAO
 ) : MainRepository {
     override suspend fun doNetworkCallForRepos(): Resource<out GithubTrending?> {
         return withContext(Dispatchers.IO){
             try{
-                val response: Response<GithubTrending> = api.getDataForRepos("android")
+                val response: Response<GithubTrending> = searchGithubServiceApi.getDataForRepos("android")
 
 
                 if(response.isSuccessful){
