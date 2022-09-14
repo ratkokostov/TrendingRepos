@@ -1,10 +1,10 @@
 package com.example.firstapp.dataLayer
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.firstapp.model.GithubTrending
 import com.example.firstapp.model.Item
-import kotlinx.coroutines.flow.Flow
+import com.example.firstapp.util.Resource
+import retrofit2.Response
 
 @Dao
 interface GithubTrendingReposDAO {
@@ -23,4 +23,11 @@ interface GithubTrendingReposDAO {
 
     @Query("DELETE FROM github_trending_repos")
     fun deleteAllRepos()
+
+    @Query("UPDATE github_trending_repos SET readmeContent =:readmeContent WHERE id =:id")
+    fun updateReadme(readmeContent: String?, id: Int?)
+
+    @Query("SELECT readmeContent FROM github_trending_repos WHERE id =:id")
+    fun getReadmeContent(id: Int?): String?
+
 }

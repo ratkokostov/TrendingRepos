@@ -2,6 +2,7 @@ package com.example.firstapp.ui.fragments.repolistfragment
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,12 +29,12 @@ import dagger.hilt.android.AndroidEntryPoint
 class GithubTrendingFragment : Fragment(), PostClickHandler {
 
     private val recyclerAdapter: RecyclerViewAdapter by lazy { RecyclerViewAdapter(this) }
-
     private var _binding: FragmentRecyclerListBinding? = null
     private val binding: FragmentRecyclerListBinding
         get() = _binding!!
-
+    private var flag = false
     private val viewModel: GithubTrendingViewModel by viewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -55,9 +56,6 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
             layoutManager = LinearLayoutManager(activity)
             adapter = recyclerAdapter
         }
-        binding.swipeToRefresh.setOnRefreshListener {
-            viewModel.makeApiCallForRepos()
-        }
         binding.noInternetConnection.listener = object : ImageTitleDescButtonListener {
             override fun onButtonClick() {
                 viewModel.makeApiCallForRepos()
@@ -66,8 +64,18 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
     }
 
     private fun initViewModel() {
-        observeRecyclerLiveData()
-        viewModel.makeApiCallForRepos()
+        if(viewModel.recyclerListLiveData.value?.data?.items?.isNotEmpty() == true){
+            viewModel.fetchFromDatabase()
+            observeRecyclerLiveData()
+            flag = true
+        } else {
+            viewModel.makeApiCallForRepos()
+            observeRecyclerLiveData()
+        }
+        binding.swipeToRefresh.setOnRefreshListener {
+            viewModel.makeApiCallForRepos()
+            observeRecyclerLiveData()
+        }
     }
 
     private fun observeRecyclerLiveData() {
@@ -80,10 +88,11 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
             binding.progressBar.isVisible = response is Resource.Loading
             when (response) {
                 is Resource.Success -> {
-                    response.data?.let {
-                        recyclerAdapter.setUpdatedData(it.items)
+                    if(!flag) {
+                        response.data?.let {
+                            recyclerAdapter.setUpdatedData(it.items)
+                        }
                     }
-
                 }
                 is Resource.Error -> {
                     with(binding) {
@@ -116,4 +125,5 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
         _binding = null
         super.onDestroy()
     }
+
 }

@@ -19,9 +19,5 @@
         android:name="com.example.firstapp.ui.fragments.detailviewfragment.RepoDetailFragment"
         android:label="fragment_repo_detail"
         tools:layout="@layout/fragment_repo_detail" >
-        <argument
-            android:name="title"
-            app:argType="string"
-            android:defaultValue='""' />
     </fragment>
 </navigation>

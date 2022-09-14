@@ -56,7 +56,7 @@ class RepoDetailFragment : Fragment() {
     }
 
     private fun initViewModel() {
-        viewModel.makeApiCallForReadme(item?.full_name, item?.default_branch)
+        viewModel.makeApiCallForReadme(item?.full_name, item?.default_branch, item?.id)
         observeReadmeLiveData()
     }
 
@@ -78,6 +78,7 @@ class RepoDetailFragment : Fragment() {
 
                 }
                 is Resource.Error -> {
+
                     binding.firstCard.render(
                         RepoDetailViewState(
                             "${item?.owner?.avatarUrl}",

@@ -10,7 +10,7 @@ import com.google.gson.reflect.TypeToken
 import kotlinx.android.parcel.Parcelize
 import java.lang.reflect.Type
 
-@Parcelize
+@kotlinx.parcelize.Parcelize
 data class Owner(
     @SerializedName("login")
     val login: String?,
