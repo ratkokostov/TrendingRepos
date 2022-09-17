@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FirstApp</string>
     <string name="profile_picture">Profile picture</string>
-    <string name="pull_down_to_refresh_btn">Pull Down to Refresh</string>
+    <string name="tap_to_refresh_btn">Tap to Refresh</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

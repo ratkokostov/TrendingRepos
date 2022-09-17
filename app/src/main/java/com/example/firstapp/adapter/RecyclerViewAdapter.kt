@@ -15,11 +15,7 @@ class RecyclerViewAdapter(private val clickHandler: PostClickHandler) :
 
     private val items: MutableList<Item> = mutableListOf()
     fun setUpdatedData(items: List<Item>) {
-        if(this.items.isEmpty()) {
             this.items.addAll(items)
-            notifyDataSetChanged()
-        }
-
     }
 
     inner class MyViewHolder(private val itemBinding: CardLayoutBinding) :
@@ -50,7 +46,6 @@ class RecyclerViewAdapter(private val clickHandler: PostClickHandler) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val binding = CardLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-
         return MyViewHolder(binding)
     }
 

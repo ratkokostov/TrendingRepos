@@ -8,6 +8,6 @@ import retrofit2.http.Query
 
 interface SearchGithubServiceApi {
     @GET("/search/repositories")
-    suspend fun getDataForRepos(@Query("q") query: String): Response<GithubTrending>
+    suspend fun doApiCallForAndroidRepos(@Query("q") query: String): Response<GithubTrending>
 
 }

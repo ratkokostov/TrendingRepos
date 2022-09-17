@@ -5,13 +5,15 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.firstapp.R
 import com.example.firstapp.databinding.FragmentRepoDetailBinding
-import com.example.firstapp.model.GithubTrending
 import com.example.firstapp.model.Item
+import com.example.firstapp.ui.extensions.ImageTitleDescButtonListener
 import com.example.firstapp.ui.extensions.firstLetterUppercase
 import com.example.firstapp.ui.extensions.setTextOrHide
 import com.example.firstapp.ui.views.RepoDetailViewState
@@ -55,22 +57,28 @@ class RepoDetailFragment : Fragment() {
         return view
     }
 
+    private fun initView() {
+        binding.button.setOnClickListener {
+            viewModel.refreshApiCallForReadmeContent(item?.full_name, item?.default_branch,item?.id)
+        }
+    }
     private fun initViewModel() {
-        viewModel.makeApiCallForReadme(item?.full_name, item?.default_branch)
+        viewModel.initializeReadmeContent(item?.full_name, item?.default_branch, item?.id)
         observeReadmeLiveData()
     }
 
     private fun observeReadmeLiveData() {
         viewModel.readmeData.observe(viewLifecycleOwner) { response ->
+            binding.cardView.isVisible = response is Resource.Success
+            binding.button.isVisible = response is Resource.Error
             when (response) {
-
-                is Resource.Success -> {
+                        is Resource.Success -> {
                     readmeContent = response.data
                     binding.firstCard.render(
                         RepoDetailViewState(
                             "${item?.owner?.avatarUrl}",
                             " ${item?.full_name?.firstLetterUppercase()}",
-                            "$item?.description",
+                            "$item?.description"
                         )
                     )
                     binding.contentReadme.setTextOrHide("$readmeContent")
@@ -78,15 +86,17 @@ class RepoDetailFragment : Fragment() {
 
                 }
                 is Resource.Error -> {
+                    readmeContent = response.data
                     binding.firstCard.render(
                         RepoDetailViewState(
                             "${item?.owner?.avatarUrl}",
                             " ${item?.full_name?.firstLetterUppercase()}",
-                            "$item?.description",
+                            "$item?.description"
                         )
                     )
+                    binding.contentReadme.setTextOrHide("$readmeContent")
                     binding.collapsingToolbar.title = item?.owner?.login?.firstLetterUppercase()
-                    binding.cardView.isVisible = false
+                    Toast.makeText(activity,"No internet connection", Toast.LENGTH_SHORT).show()
                 }
                 is Resource.Loading -> {
 
@@ -97,6 +107,7 @@ class RepoDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initView()
         initViewModel()
     }
 
