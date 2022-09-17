@@ -13,9 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_layout_height"
         android:fitsSystemWindows="true"
-        android:background="@drawable/repodetail_gradient_bg"
-        >
-
+        android:background="@drawable/repodetail_gradient_bg">
     <com.google.android.material.appbar.CollapsingToolbarLayout
         android:id="@+id/collapsing_toolbar"
         android:layout_width="match_parent"
@@ -45,9 +43,10 @@
 
 
     </com.google.android.material.appbar.CollapsingToolbarLayout>
+</com.google.android.material.appbar.AppBarLayout>
 
-    </com.google.android.material.appbar.AppBarLayout>
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestledScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/scrollview_white_bg"
@@ -62,6 +61,7 @@
         android:id="@+id/first_card"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
@@ -70,6 +70,8 @@
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="12dp"
         app:cardElevation="3dp"
+        android:visibility="gone"
+        tools:visibility="gone"
         app:contentPadding="10dp">
 
         <TextView
@@ -87,10 +89,29 @@
             android:gravity="start"
             android:paddingTop="35dp"
             tools:text="@string/no_internet_connection_description" />
+
     </androidx.cardview.widget.CardView>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:paddingTop="50dp"
+                android:layout_height="match_parent">
+            <Button
+                android:visibility="gone"
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:text="@string/tap_to_refresh_btn"
+                android:layout_height="wrap_content"
+                android:background="@color/orange"
+                android:paddingLeft="10dp"
+                android:paddingBottom="15dp"
+                android:layout_gravity="center"
+                android:paddingRight="10dp"
+                android:layout_marginTop="20dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                />
+            </FrameLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

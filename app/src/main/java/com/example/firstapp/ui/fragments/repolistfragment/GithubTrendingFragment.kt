@@ -1,8 +1,6 @@
 package com.example.firstapp.ui.fragments.repolistfragment
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.firstapp.R
 import com.example.firstapp.adapter.RecyclerViewAdapter
 import com.example.firstapp.databinding.FragmentRecyclerListBinding
-import com.example.firstapp.model.GithubTrending
 import com.example.firstapp.model.Item
 import com.example.firstapp.ui.PostClickHandler
 import com.example.firstapp.ui.extensions.ImageTitleDescButtonListener
@@ -32,7 +29,6 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
     private var _binding: FragmentRecyclerListBinding? = null
     private val binding: FragmentRecyclerListBinding
         get() = _binding!!
-    private var flag = false
     private val viewModel: GithubTrendingViewModel by viewModels()
 
     override fun onCreateView(
@@ -56,26 +52,19 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
             layoutManager = LinearLayoutManager(activity)
             adapter = recyclerAdapter
         }
+        binding.swipeToRefresh.setOnRefreshListener {
+            viewModel.refreshApiCallForRepos()
+        }
         binding.noInternetConnection.listener = object : ImageTitleDescButtonListener {
             override fun onButtonClick() {
-                viewModel.makeApiCallForRepos()
+                viewModel.refreshApiCallForRepos()
             }
         }
     }
 
     private fun initViewModel() {
-        if(viewModel.recyclerListLiveData.value?.data?.items?.isNotEmpty() == true){
-            viewModel.fetchFromDatabase()
-            observeRecyclerLiveData()
-            flag = true
-        } else {
-            viewModel.makeApiCallForRepos()
-            observeRecyclerLiveData()
-        }
-        binding.swipeToRefresh.setOnRefreshListener {
-            viewModel.makeApiCallForRepos()
-            observeRecyclerLiveData()
-        }
+        viewModel.initializeGithubRepos()
+        observeRecyclerLiveData()
     }
 
     private fun observeRecyclerLiveData() {
@@ -88,10 +77,8 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
             binding.progressBar.isVisible = response is Resource.Loading
             when (response) {
                 is Resource.Success -> {
-                    if(!flag) {
-                        response.data?.let {
-                            recyclerAdapter.setUpdatedData(it.items)
-                        }
+                    response.data?.let {
+                        recyclerAdapter.setUpdatedData(it.items)
                     }
                 }
                 is Resource.Error -> {
@@ -101,7 +88,7 @@ class GithubTrendingFragment : Fragment(), PostClickHandler {
                                 R.drawable.nointernetconnection,
                                 getString(R.string.whoops),
                                 getString(R.string.no_internet_connection_description),
-                                getString(R.string.pull_down_to_refresh_btn)
+                                getString(R.string.tap_to_refresh_btn)
                             )
                         )
                     }

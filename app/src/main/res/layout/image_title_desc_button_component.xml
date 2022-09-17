@@ -49,7 +49,7 @@
         android:background="@color/teal_200"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        tools:text="@string/pull_down_to_refresh_btn"
+        tools:text="@string/tap_to_refresh_btn"
         android:layout_marginTop="20dp"
         android:textAllCaps="false"
         android:textColor="@color/white"

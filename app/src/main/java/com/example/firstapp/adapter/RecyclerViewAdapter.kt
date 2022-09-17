@@ -14,10 +14,8 @@ class RecyclerViewAdapter(private val clickHandler: PostClickHandler) :
     RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
 
     private val items: MutableList<Item> = mutableListOf()
-    fun setUpdatedData(items: List<Item>?) {
-        if (items != null) {
+    fun setUpdatedData(items: List<Item>) {
             this.items.addAll(items)
-        }
     }
 
     inner class MyViewHolder(private val itemBinding: CardLayoutBinding) :
